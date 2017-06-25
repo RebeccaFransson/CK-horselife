@@ -10,6 +10,7 @@
     <h3>{{fullname}}</h3>
     <p>end</p>
     <h2>{{msg}}</h2>
+    <router-link v-bind:to="'add'">add new blogpost</router-link>
   </div>
 </template>
 
