@@ -82,16 +82,18 @@ export default {
   background-size: cover;
 
   border: white 1px solid;
+
+  cursor: pointer;
+
+  transition: .5s ease;
 }
-/* @keyframes hoverPicture{
-  0% {font-size: 20px;}
-  100% {font-size: 22px;}
-} */
+
 #navigation .navColumn .navPicture:hover h3 {
-  /* animation: hoverPicture;
-  animation-duration: 0.5s;
-  animation-timing-function: ease; */
   font-size: 22px;
+}
+
+#navigation .navColumn .navPicture:hover {
+  transform: scale(1.03);
 }
 
 #navigation .navColumn:nth-child(1) .navPicture {
@@ -104,10 +106,8 @@ export default {
 }
 
 #navigation .navColumn:nth-child(3) .navPicture {
-  background-image: URL('../../static/kli.jpg');
-  background-position: 51%;
-  border-bottom: none;
-  border-top: white 1px solid;
+  background-image: URL('../../static/ben.jpg');
+  color: #403427;
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
@@ -115,8 +115,8 @@ export default {
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('../../static/ben.jpg');
-  color: #403427;
+  background-image: URL('../../static/kli.jpg');
+  background-position: 51%;
 }
 </style>
 
