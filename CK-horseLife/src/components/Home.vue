@@ -82,6 +82,7 @@ export default {
   background-color: rgba(250, 235, 215, 0.49);
 }
 #navigation .navColumn .navPicture {
+  max-height: 50vh;
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -107,15 +108,16 @@ export default {
 
 
 #navigation .navColumn:nth-child(3) .navPicture {
-  background-image: URL('../../static/sto.jpg');
+  max-height: 40vh;
+  background-image: URL('../../static/kli.jpg');
+  background-position: 51%;
   align-self: flex-end;
   border-bottom: none;
   border-top: white 1px solid;
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
-  background-image: URL('../../static/kli.jpg');
-  background-position: 51%;
+  background-image: URL('../../static/sto.jpg');
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
