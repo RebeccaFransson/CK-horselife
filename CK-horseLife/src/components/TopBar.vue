@@ -1,31 +1,31 @@
 
 import snabbt
 <template>
-    <div id="topBar">
-      <div v-on:mouseover="onMouseOver" class="navItem">
-        <router-link v-bind:to="'add'">
-          <span>Gården</span>
-        </router-link>
+    <div id="navigation">
+      <div class="navColumn">
+        <div class="navPicture">
+          <h3>Gården</h3>
+        </div>
       </div>
-      <div v-on:mouseover="onMouseOver" class="navItem">
-        <router-link v-bind:to="'add'">
-          <span>Hästarna</span>
-        </router-link>
+      <div class="navColumn">
+        <div class="navPicture">
+          <h3>Hästar</h3>
+        </div>
       </div>
-      <div v-on:mouseover="onMouseOver" class="navItem">
-        <router-link v-bind:to="'add'">
-          <span>Uppfödningen</span>
-        </router-link>
+      <div class="navColumn">
+        <div class="navPicture">
+          <h3>Inackodering</h3>
+        </div>
       </div>
-      <div v-on:mouseover="onMouseOver" class="navItem">
-        <router-link v-bind:to="'add'">
-          <span>Medryttare</span>
-        </router-link>
+      <div class="navColumn">
+        <div class="navPicture">
+          <h3>Medryttare</h3>
+        </div>
       </div>
-      <div v-on:mouseover="onMouseOver" class="navItem">
-        <router-link v-bind:to="'add'">
-          <span>Inackoderingar</span>
-        </router-link>
+      <div class="navColumn">
+        <div class="navPicture">
+          <h3>Uppfödning</h3>
+        </div>
       </div>
     </div>
 </template>
@@ -49,39 +49,67 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
-
-#topBar {
-  width: 100vw;
+#navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  background-color: rgba(147, 159, 80, 0.35);
+}
+#navigation .navColumn {
+  color: #826849;
+  width: min-content;
+  min-width: 200px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 1.5vw 2vh 1.5vw;
+  flex-grow: 1;
+}
+#navigation .navColumn h3{
+  width: 100%;
+  background-color: rgba(250, 235, 215, 0.49);
+}
+#navigation .navColumn .navPicture {
+  max-height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 70vh;
+  justify-content: center;
+
+  background-position: center;
+  background-size: cover;
+
+  border: white 1px solid;
+  border-top: none;
+
 }
 
-#topBar .navItem {
-  padding: 15px;
+#navigation .navColumn:nth-child(1) .navPicture {
+  background-image: URL('../../static/albin.jpg');
 }
 
-#topBar a {
-  color: #6a7337;
-  font-size: 150%;
-  text-decoration: none;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: bold;
-  position: relative;
+#navigation .navColumn:nth-child(2) .navPicture {
+  background-image: URL('../../static/shirin.jpg');
+  color: #403427;
 }
 
-#topBar .navItem:hover{
-  /*border-bottom: white 1px solid;*/
-  animation-name: hover;
-  animation-duration: 1s;
+
+#navigation .navColumn:nth-child(3) .navPicture {
+  background-image: URL('../../static/kli.jpg');
+  background-position: 51%;
+  align-self: flex-end;
+  border-bottom: none;
+  border-top: white 1px solid;
 }
 
-/* ANIMATIONS */
-@keyframes hover {
-    from {top: 0}
-    to {top: 10px;}
+#navigation .navColumn:nth-child(4) .navPicture {
+  background-image: URL('../../static/sto.jpg');
+}
+
+#navigation .navColumn:nth-child(5) .navPicture {
+  background-image: URL('../../static/ben.jpg');
+  color: #403427;
 }
 </style>
 
