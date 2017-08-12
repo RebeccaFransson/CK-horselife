@@ -40,8 +40,6 @@ export default {
     }
   },
   methods: {
-    onMouseOver: function(event) {
-    }
   }
 }
 </script>
@@ -53,21 +51,24 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  min-height: 340px;
 }
 #navigation .navColumn {
   color: #826849;
   width: min-content;
-  min-width: 200px;
+  width: 300px;
   
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 1.5vw 2vh 1.5vw;
+  margin: 2vh 1.5vw;
   flex-grow: 1;
 }
 #navigation .navColumn h3{
+  font-size: 20px;
   width: 100%;
   background-color: rgba(250, 235, 215, 0.49);
+  transition: .5s ease;
 }
 #navigation .navColumn .navPicture {
   max-height: 50vh;
@@ -81,8 +82,16 @@ export default {
   background-size: cover;
 
   border: white 1px solid;
-  border-top: none;
-
+}
+/* @keyframes hoverPicture{
+  0% {font-size: 20px;}
+  100% {font-size: 22px;}
+} */
+#navigation .navColumn .navPicture:hover h3 {
+  /* animation: hoverPicture;
+  animation-duration: 0.5s;
+  animation-timing-function: ease; */
+  font-size: 22px;
 }
 
 #navigation .navColumn:nth-child(1) .navPicture {
@@ -94,11 +103,9 @@ export default {
   color: #403427;
 }
 
-
 #navigation .navColumn:nth-child(3) .navPicture {
   background-image: URL('../../static/kli.jpg');
   background-position: 51%;
-  align-self: flex-end;
   border-bottom: none;
   border-top: white 1px solid;
 }

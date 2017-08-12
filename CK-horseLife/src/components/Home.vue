@@ -27,7 +27,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-#home {
+body {
   background-color: #c4d4dd;
   width: 100vw;
   height: 100vh;
