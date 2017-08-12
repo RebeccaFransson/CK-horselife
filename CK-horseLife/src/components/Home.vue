@@ -21,11 +21,7 @@
           <h3>Medryttare</h3>
         </div>
       </div>
-      <div class="navColumn">
-        <div class="navPicture">
-          <h3>Uppfödning</h3>
-        </div>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -69,6 +65,7 @@ export default {
 #navigation .navColumn {
   color: #826849;
   width: min-content;
+  min-width: 200px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -76,7 +73,11 @@ export default {
   margin: 0 1.5vw 0 1.5vw;
   flex-grow: 1;
 }
-#navigation .navPicture {
+#navigation .navColumn h3{
+  width: 100%;
+  background-color: rgba(250, 235, 215, 0.49);
+}
+#navigation .navColumn .navPicture {
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -97,8 +98,9 @@ export default {
 
 #navigation .navColumn:nth-child(2) .navPicture {
   background-image: URL('../../static/shirin.jpg');
-  color: #DABB62;
+  color: #403427;
 }
+
 
 #navigation .navColumn:nth-child(3) .navPicture {
   background-image: URL('../../static/sto.jpg');
@@ -113,8 +115,10 @@ export default {
 
 #navigation .navColumn:nth-child(5) .navPicture {
   background-image: URL('../../static/shirin.jpg');
-  color: #DABB62;
+  color: #403427;
 }
+
+
 </style>
 <!--
 
