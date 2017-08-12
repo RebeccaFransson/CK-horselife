@@ -3,7 +3,7 @@
     <topBar :open-popup="openPopup"></topBar>
     
     <bottomBar></bottomBar>
-    <popup v-show="popup"></popup>
+    <popup v-show="popup" :class="{hide : !popup}" :whichPopup="whichPopup"></popup>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      popup: true,
+      popup: false,
       whichPopup: ''
     }
   },

@@ -3,27 +3,27 @@ import snabbt
 <template>
     <div id="navigation">
       <div class="navColumn">
-        <div @click="openPopup('gard')" class="navPicture">
+        <div @click="openPopup('Gården')" class="navPicture">
           <h3>Gården</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div @click="openPopup('hastar')" class="navPicture">
+        <div @click="openPopup('Hästar')" class="navPicture">
           <h3>Hästar</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div @click="openPopup('inackodering')" class="navPicture">
+        <div @click="openPopup('Inackodering')" class="navPicture">
           <h3>Inackodering</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div @click="openPopup('medryttare')" class="navPicture">
+        <div @click="openPopup('Medryttare')" class="navPicture">
           <h3>Medryttare</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div @click="openPopup('uppfoding')" class="navPicture">
+        <div @click="openPopup('Uppföding')" class="navPicture">
           <h3>Uppfödning</h3>
         </div>
       </div>
