@@ -3,27 +3,27 @@ import snabbt
 <template>
     <div id="navigation">
       <div class="navColumn">
-        <div class="navPicture">
+        <div @click="openPopup('gard')" class="navPicture">
           <h3>Gården</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div class="navPicture">
+        <div @click="openPopup('hastar')" class="navPicture">
           <h3>Hästar</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div class="navPicture">
+        <div @click="openPopup('inackodering')" class="navPicture">
           <h3>Inackodering</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div class="navPicture">
+        <div @click="openPopup('medryttare')" class="navPicture">
           <h3>Medryttare</h3>
         </div>
       </div>
       <div class="navColumn">
-        <div class="navPicture">
+        <div @click="openPopup('uppfoding')" class="navPicture">
           <h3>Uppfödning</h3>
         </div>
       </div>
@@ -34,9 +34,13 @@ import snabbt
 <script>
 export default {
   name: 'topBar',
+  props: {
+    openPopup: {
+      type: Function
+    }
+  },
   data () {
     return {
-      hovering: false
     }
   },
   methods: {
@@ -91,29 +95,22 @@ export default {
 #navigation .navColumn .navPicture:hover h3 {
   font-size: 22px;
 }
-
 #navigation .navColumn .navPicture:hover {
   transform: scale(1.03);
 }
-
 #navigation .navColumn:nth-child(1) .navPicture {
   background-image: URL('../../static/albin.jpg');
 }
-
 #navigation .navColumn:nth-child(2) .navPicture {
   background-image: URL('../../static/shirin.jpg');
   color: #403427;
 }
-
 #navigation .navColumn:nth-child(3) .navPicture {
-  background-image: URL('../../static/ben.jpg');
-  color: #403427;
+  background-image: URL('../../static/shirin2.jpg');
 }
-
 #navigation .navColumn:nth-child(4) .navPicture {
   background-image: URL('../../static/sto.jpg');
 }
-
 #navigation .navColumn:nth-child(5) .navPicture {
   background-image: URL('../../static/kli.jpg');
   background-position: 51%;
