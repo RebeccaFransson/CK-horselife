@@ -21,7 +21,11 @@
           <h3>Medryttare</h3>
         </div>
       </div>
-      
+      <div class="navColumn">
+        <div class="navPicture">
+          <h3>Uppfödning</h3>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -110,11 +114,12 @@ export default {
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
-  background-image: URL('../../static/albin.jpg');
+  background-image: URL('../../static/kli.jpg');
+  background-position: 51%;
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('../../static/shirin.jpg');
+  background-image: URL('../../static/ben.jpg');
   color: #403427;
 }
 
