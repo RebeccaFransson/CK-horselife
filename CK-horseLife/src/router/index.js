@@ -10,8 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home,
-      props: {msg: 'toohej!'}
+      component: Home
     },
     {
       path: '/add',
