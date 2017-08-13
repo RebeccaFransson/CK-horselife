@@ -1,35 +1,49 @@
 <template>
   <div id="popup" :class="{hide : !popup}">
-    <h1>{{ whichPopup }}</h1>
-    <h1>{{ whichPopup }}</h1>
-    <h1>{{ whichPopup }}</h1>
-    <h1>{{ whichPopup }}</h1>
+    <div class="topBar">
+      <h3>{{ whichPopup }}</h3>
+      <div class="close" @click="closePopup">&#10006;</div>
+    </div>
+    <inackodering v-show="whichPopup === 'Inackodering'"></inackodering>
+    <garden v-show="whichPopup === 'Gården'"></garden>
+  
   </div>
 </template>
 
 <script>
+import Inackodering from './popups/Inackodering'
+import Garden from './popups/Garden'
+
 export default {
   name: 'popup',
+  components: {
+    inackodering: Inackodering,
+    garden: Garden
+  },
   props: {
     popup: {
       type: Boolean
     },
     whichPopup: {
       type: String
+    },
+    closePopup: {
+      type: Function
     }
   },
-  watch: {
-    popup: function () {
-      if (this.popup) {
-        $('#popup').animate({ height: 'auto' }, 500)
-      }
-    }
+  beforeCreate: function () {
   },
-  data() {
-    return {
-    }
-  },
-  methods: {
+  mounted: function () {
+    console.log('mounted')
+    console.log($('#popup').is(':hidden'))
+    // $('#popup').show(5000, function () {
+    //   console.log('done')
+    // })
+    // if ($('#popup').is(':hidden')) {
+    //   $('#popup').show('slow')
+    // } else {
+    //   $('#popup').slideUp()
+    // }
   }
 }
 </script>
@@ -40,13 +54,43 @@ export default {
   width: 97vw;
   background-color: white;
   margin: auto;
-  height: 0;
+  transition: all .5s ease;
+  border: 1px solid white;
+}
+
+#popup .topBar {
+  background-image: url('../../static/alla.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #403427;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#popup .topBar h3 {
+  font-size: 250%;
+  text-align: center;
+  margin: 0;
+  border: 3px solid white;
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 0 10px;
+}
+
+#popup .topBar .close {
+  cursor: pointer;
+  font-size: 250%;
+  padding: 0 15px;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   transition: all .5s ease;
 }
 
-#popup.hide {
-  transition: all .5s ease;
-  display: none;
-  top: 100vh;
+#popup .topBar .close:hover {
+  transform: scale(1.25);
 }
+#popup.hide {
+  display: none;
+}
+
+
 </style>

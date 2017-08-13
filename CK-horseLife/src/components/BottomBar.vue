@@ -37,11 +37,11 @@ export default {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   color: #5b4c3e;
-  /* position: absolute; */
   background-color: #d9ebf5;
   bottom: 0;
   width: 100%;
   padding: 20px 0 30px 0;
+  margin: 50px 0;
 }
 
 #bottomBar .barItems {
