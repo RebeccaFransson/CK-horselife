@@ -11,8 +11,9 @@
       </div>
       <div class="item">
         <p><span>Adress</span></p>
-        <div>Liebacksvägen,<br>
-        231 93 Trelleborg</div>
+        <div>Libacka gård, <br>
+          Liebacksvägen,<br>
+          231 93 Trelleborg</div>
       </div>
     </div>
   </div>
@@ -51,7 +52,7 @@ export default {
 }
 
 #bottomBar .item{
-  max-width: 200px;
+  max-width: 13%;
   margin: 0 20px;
   word-break: break-all;
 }

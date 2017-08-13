@@ -1,5 +1,8 @@
 <template>
-  <div id="popup">
+  <div id="popup" :class="{hide : !popup}">
+    <h1>{{ whichPopup }}</h1>
+    <h1>{{ whichPopup }}</h1>
+    <h1>{{ whichPopup }}</h1>
     <h1>{{ whichPopup }}</h1>
   </div>
 </template>
@@ -8,8 +11,18 @@
 export default {
   name: 'popup',
   props: {
+    popup: {
+      type: Boolean
+    },
     whichPopup: {
       type: String
+    }
+  },
+  watch: {
+    popup: function () {
+      if (this.popup) {
+        $('#popup').animate({ height: 'auto' }, 500)
+      }
     }
   },
   data() {
@@ -23,16 +36,17 @@ export default {
 
 <style>
 #popup {
-  position: absolute; 
-  left: 0; 
-  right: 0; 
-  bottom: 0;
-  margin-left: auto; 
-  margin-right: auto; 
-  width: 500px;
+  align-self: center;
+  width: 97vw;
   background-color: white;
+  margin: auto;
+  height: 0;
+  transition: all .5s ease;
 }
-#popup .hide{
+
+#popup.hide {
+  transition: all .5s ease;
   display: none;
+  top: 100vh;
 }
 </style>

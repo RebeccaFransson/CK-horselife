@@ -23,27 +23,36 @@ import snabbt
         </div>
       </div>
       <div class="navColumn">
-        <div @click="openPopup('Uppföding')" class="navPicture">
+        <div @click="openPopup('Uppföding')" class="navPicture" >
           <h3>Uppfödning</h3>
         </div>
       </div>
+      <popup v-if="popup" :popup="popup" :whichPopup="whichPopup"></popup>
     </div>
 </template>
 
 
 <script>
+import Popup from './Popup'
 export default {
   name: 'topBar',
-  props: {
-    openPopup: {
-      type: Function
-    }
+  components: {
+    popup: Popup
   },
   data () {
     return {
+      popup: false,
+      whichPopup: ''
     }
   },
   methods: {
+    openPopup: function(which) {
+      this.popup = true
+      this.whichPopup = which
+    },
+    closePopup: function() {
+      this.popup = false
+    }
   }
 }
 </script>
@@ -60,19 +69,20 @@ export default {
 #navigation .navColumn {
   color: #826849;
   width: min-content;
-  width: 300px;
+  max-width: none;
+  min-width: min-content;
   
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 2vh 1.5vw;
   flex-grow: 1;
+  transition: .5s ease;
 }
 #navigation .navColumn h3{
   font-size: 20px;
   width: 100%;
   background-color: rgba(250, 235, 215, 0.49);
-  transition: .5s ease;
 }
 #navigation .navColumn .navPicture {
   max-height: 50vh;
@@ -92,11 +102,8 @@ export default {
   transition: .5s ease;
 }
 
-#navigation .navColumn .navPicture:hover h3 {
-  font-size: 22px;
-}
 #navigation .navColumn .navPicture:hover {
-  transform: scale(1.03);
+   transform: scale(1.04); 
 }
 #navigation .navColumn:nth-child(1) .navPicture {
   background-image: URL('../../static/albin.jpg');
