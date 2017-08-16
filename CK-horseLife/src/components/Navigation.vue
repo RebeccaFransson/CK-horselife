@@ -92,6 +92,7 @@ export default {
   transition: .5s ease;
 }
 
+
 #navigation .navColumn h3 {
   font-size: 20px;
   width: 100%;
@@ -144,6 +145,25 @@ export default {
 #navigation .navColumn:nth-child(5) .navPicture {
   background-image: URL('../../static/kli.jpg');
   background-position: 51%;
+}
+/* MOBILE DEVICES */
+@media only screen and (max-device-width: 480px) {
+  /* define mobile specific styles come here */
+  #navigation .navColumn { 
+    min-width: 98vw;
+  }
+  #navigation .navColumn h3 {
+    font-size: 70px;
+  }
+  #navigation .navColumn .navPicture {
+    min-height: 40vh;
+  }
+}
+/* TABLETS */
+@media only screen and (max-device-width: 768px) {
+  #navigation .navColumn { 
+   min-width: 40vw;
+  }
 }
 </style>
 
