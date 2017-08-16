@@ -6,6 +6,7 @@
     </div>
     <inackodering v-show="whichPopup === 'Inackodering'"></inackodering>
     <garden v-show="whichPopup === 'Gården'"></garden>
+    <hastar v-show="whichPopup === 'Hästar'"></hastar>
   
   </div>
 </template>
@@ -13,12 +14,14 @@
 <script>
 import Inackodering from './popups/Inackodering'
 import Garden from './popups/Garden'
+import Hastar from './popups/Hastar'
 
 export default {
   name: 'popup',
   components: {
     inackodering: Inackodering,
-    garden: Garden
+    garden: Garden,
+    hastar: Hastar
   },
   props: {
     popup: {

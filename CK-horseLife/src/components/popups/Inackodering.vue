@@ -56,7 +56,7 @@ export default {
     text-align: left;
 }
 #inackoderingar img {
-    width: 30%;
+    width: 40%;
     margin: 20px;
     border: 2px solid #5b4637;
 }
