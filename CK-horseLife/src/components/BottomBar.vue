@@ -33,7 +33,6 @@ export default {
 
 <style>
 #bottomBar {
-  max-height: 140px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   color: #5b4c3e;
@@ -42,19 +41,23 @@ export default {
   width: 100%;
   padding: 20px 0 30px 0;
   margin: 50px 0;
+  min-height: min-content;
 }
 
 #bottomBar .barItems {
-  display: flex;
   width: 80vw;
   margin: auto;
-  align-items: row;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #bottomBar .item{
-  max-width: 13%;
   margin: 0 20px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 #bottomBar p {
@@ -67,5 +70,21 @@ export default {
 #bottomBar p > span{
   padding: 0 7px;
   border-bottom: 1px solid #cabc5b;
+}
+
+/* MOBILE DEVICES */
+@media only screen and (max-device-width: 480px) {
+  #bottomBar {
+    font-size: 50px;
+  }
+  #bottomBar .item{
+    min-width: 50vw;
+  }
+}
+/* TABLETS */
+@media only screen and (max-device-width: 768px) and (min-device-width: 480px){
+ #bottomBar {
+    font-size: 30px;
+  }
 }
 </style>

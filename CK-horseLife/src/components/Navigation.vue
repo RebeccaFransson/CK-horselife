@@ -48,7 +48,7 @@ export default {
       console.log('more stuff')
       this.popup = true
       this.whichPopup = which
-      // this.showSmallNavPictures(true)
+      this.showSmallNavPictures(true)
     },
     closePopup: function () {
       this.popup = false
@@ -83,17 +83,19 @@ export default {
   width: min-content;
   max-width: none;
   min-width: min-content;
+  margin: 2vh 1.5vw;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 2vh 1.5vw;
   flex-grow: 1;
+
   transition: .5s ease;
 }
 
 
 #navigation .navColumn h3 {
+  padding: 0 20px;
   font-size: 20px;
   width: 100%;
   background-color: rgba(250, 235, 215, 0.49);
@@ -147,7 +149,7 @@ export default {
   background-position: 51%;
 }
 /* MOBILE DEVICES */
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px){
   /* define mobile specific styles come here */
   #navigation .navColumn { 
     min-width: 98vw;
@@ -156,13 +158,19 @@ export default {
     font-size: 70px;
   }
   #navigation .navColumn .navPicture {
-    min-height: 40vh;
+    min-height: 20vh;
   }
 }
 /* TABLETS */
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 768px) and (min-device-width: 480px){
   #navigation .navColumn { 
    min-width: 40vw;
+  }
+  #navigation .navColumn h3 {
+    font-size: 40px;
+  }
+  #navigation .navColumn .navPicture {
+    min-height: 40vh;
   }
 }
 </style>
