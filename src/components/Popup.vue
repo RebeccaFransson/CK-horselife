@@ -1,12 +1,12 @@
 <template>
-  <div id="popup" :class="{hide : !popup}">
+  <div id="popup">
     <div class="topBar">
       <h3>{{ whichPopup }}</h3>
       <div class="close" @click="closePopup">&#10006;</div>
     </div>
-    <inackodering v-show="whichPopup === 'Inackodering'"></inackodering>
-    <garden v-show="whichPopup === 'Gården'"></garden>
-    <hastar v-show="whichPopup === 'Hästar'"></hastar>
+    <inackodering v-if="whichPopup === 'Inackodering'"></inackodering>
+    <garden v-if="whichPopup === 'Gården'"></garden>
+    <hastar v-if="whichPopup === 'Hästar'"></hastar>
   
   </div>
 </template>
@@ -24,29 +24,12 @@ export default {
     hastar: Hastar
   },
   props: {
-    popup: {
-      type: Boolean
-    },
     whichPopup: {
       type: String
     },
     closePopup: {
       type: Function
     }
-  },
-  beforeCreate: function () {
-  },
-  mounted: function () {
-    console.log('mounted')
-    console.log($('#popup').is(':hidden'))
-    // $('#popup').show(5000, function () {
-    //   console.log('done')
-    // })
-    // if ($('#popup').is(':hidden')) {
-    //   $('#popup').show('slow')
-    // } else {
-    //   $('#popup').slideUp()
-    // }
   }
 }
 </script>
@@ -55,10 +38,12 @@ export default {
 #popup {
   align-self: center;
   width: 97vw;
+  min-height: min-content;
   background-color: white;
   margin: auto;
-  transition: all .5s ease;
   border: 1px solid white;
+
+  transition: all .5s ease;
 }
 
 #popup .topBar {
@@ -91,9 +76,8 @@ export default {
 #popup .topBar .close:hover {
   transform: scale(1.25);
 }
+
 #popup.hide {
   display: none;
 }
-
-
 </style>

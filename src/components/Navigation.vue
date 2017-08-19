@@ -1,5 +1,5 @@
 <template>
-  <div id="navigation">
+  <div id="navigation" class="popup">
     <div class="navColumn">
       <div @click="openPopup('Gården')" class="navPicture">
         <h3>Gården</h3>
@@ -25,7 +25,7 @@
         <h3>Uppfödning</h3>
       </div>
     </div>
-    <popup :class="{hide: !popup}" :popup="popup" :whichPopup="whichPopup" :close-popup="closePopup"></popup>
+    <popup :class="{hide: !popup}" :whichPopup="whichPopup" :close-popup="closePopup"></popup>
   </div>
 </template>
 
@@ -45,7 +45,6 @@ export default {
   },
   methods: {
     openPopup: function (which) {
-      console.log('more stuff')
       this.popup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
@@ -55,13 +54,10 @@ export default {
       this.showSmallNavPictures(false)
     },
     showSmallNavPictures: function (show) {
-      var navPic = $('.navPicture')
       if (show) {
-        if (!navPic.hasClass('small')) {
-          navPic.addClass('small')
-        }
+        $('.navPicture').addClass('small')
       } else {
-        navPic.removeClass('small')
+        $('.navPicture').removeClass('small')
       }
     }
   }
@@ -148,10 +144,13 @@ export default {
   background-image: URL('../../static/kli.jpg');
   background-position: 51%;
 }
+
+
 /* MOBILE DEVICES */
-@media only screen and (max-device-width: 480px){
+
+@media only screen and (max-device-width: 480px) {
   /* define mobile specific styles come here */
-  #navigation .navColumn { 
+  #navigation .navColumn {
     min-width: 98vw;
   }
   #navigation .navColumn h3 {
@@ -161,10 +160,13 @@ export default {
     min-height: 20vh;
   }
 }
+
+
 /* TABLETS */
-@media only screen and (max-device-width: 768px) and (min-device-width: 480px){
-  #navigation .navColumn { 
-   min-width: 40vw;
+
+@media only screen and (max-device-width: 768px) and (min-device-width: 480px) {
+  #navigation .navColumn {
+    min-width: 40vw;
   }
   #navigation .navColumn h3 {
     font-size: 40px;
