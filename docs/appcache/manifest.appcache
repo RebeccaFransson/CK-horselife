@@ -1,0 +1,37 @@
+CACHE MANIFEST
+#ver:8/20/2017, 10:06:40 PM
+#plugin:4.8.3
+
+CACHE:
+/static/media/alla.2b5c52b3.jpg
+/static/media/föl.07106f1d.jpg
+/static/media/emilhopp.32413528.jpg
+/client.d795ba53.js
+/vendor.370744e1.js
+/manifest.8b90d74f.js
+/client.f71868f9.css
+/alla.jpg
+/albin.jpg
+/favicon.ico
+/föl.jpg
+/gräs.jpg
+/hooves.jpg
+/icons/android-chrome-192x192.png
+/icons/android-chrome-512x512.png
+/kli.jpg
+/emilhopp.jpg
+/manifest.json
+/popups.css
+/emil.jpg
+/shirin.jpg
+/sto.jpg
+/emil-hopp.jpg
+/shirin2.jpg
+/lakritz-hopp.jpg
+/
+
+NETWORK:
+*
+
+FALLBACK:
+/ /
