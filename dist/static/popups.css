@@ -1,0 +1,21 @@
+#popup .popup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: min-content;
+
+    text-align: left;
+}
+#popup .popup img {
+    width: 40%;
+    margin: 20px;
+    border: 2px solid #5b4637;
+}
+#popup .popup .text{
+    width: 30%;
+    margin: 20px;
+}
