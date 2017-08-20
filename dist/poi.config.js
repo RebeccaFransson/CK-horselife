@@ -1,8 +1,5 @@
 const path = require('path')
 const pkg = require('./package')
-var ghpages = require('gh-pages');
-
-ghpages.publish('dist', function(err) {});
 
 module.exports = {
   entry: [
