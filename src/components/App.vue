@@ -1,21 +1,25 @@
 <template>
   <div id="app">
-    <home></home>
+    <navigation></navigation>
+    <bottomBar></bottomBar>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Navigation from './Navigation.vue'
+import BottomBar from './BottomBar'
 
 export default {
   name: 'app',
   components: {
-    'home': Home
+    'navigation': Navigation,
+    'bottomBar': BottomBar
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 html {
   height: 100vh;
   width: 100vw;
@@ -24,6 +28,9 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #c4d4dd;
+  width: 100vw;
+  height: 100vh;
 }
 
 #app {
@@ -33,4 +40,5 @@ body {
   text-align: center;
   color: #2c3e50;
 }
+
 </style>
