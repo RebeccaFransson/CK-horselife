@@ -124,24 +124,24 @@ export default {
 }
 
 #navigation .navColumn:nth-child(1) .navPicture {
-  background-image: URL('../static/albin.jpg');
+  background-image: URL('../../static/albin.jpg');
 }
 
 #navigation .navColumn:nth-child(2) .navPicture {
-  background-image: URL('../static/shirin.jpg');
+  background-image: URL('../../static/shirin.jpg');
   color: #403427;
 }
 
 #navigation .navColumn:nth-child(3) .navPicture {
-  background-image: URL('../static/shirin2.jpg');
+  background-image: URL('../../static/shirin2.jpg');
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
-  background-image: URL('../static/sto.jpg');
+  background-image: URL('../../static/sto.jpg');
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('../static/kli.jpg');
+  background-image: URL('../../static/kli.jpg');
   background-position: 51%;
 }
 
