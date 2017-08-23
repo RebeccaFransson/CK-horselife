@@ -3,9 +3,9 @@ CACHE MANIFEST
 #plugin:4.8.3
 
 CACHE:
-/static/media/alla.2b5c52b3.jpg
-/static/media/fol.07106f1d.jpg
-/static/media/emilhopp.32413528.jpg
+/media/alla.2b5c52b3.jpg
+/media/fol.07106f1d.jpg
+/media/emilhopp.32413528.jpg
 /client.ad6ddfb5.js
 /vendor.370744e1.js
 /manifest.603e48b5.js
