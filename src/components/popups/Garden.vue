@@ -25,7 +25,7 @@
       </p>
     </div>
 
-     <img src="../../../static/media/emilhopp.jpg" alt="Smiley face">
+     <img src="../../../static/emilhopp.jpg" alt="Smiley face">
 
   </div>
 </template>
