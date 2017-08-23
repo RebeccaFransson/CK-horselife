@@ -1,33 +1,33 @@
 CACHE MANIFEST
-#ver:8/21/2017, 9:34:51 PM
+#ver:8/23/2017, 7:22:08 PM
 #plugin:4.8.3
 
 CACHE:
-/alla.2b5c52b3.jpg
-/f%C3%B6l.07106f1d.jpg
-/emilhopp.32413528.jpg
-/client.f31546fd.js
+/static/media/alla.2b5c52b3.jpg
+/static/media/fol.07106f1d.jpg
+/static/media/emilhopp.32413528.jpg
+/client.ad6ddfb5.js
 /vendor.370744e1.js
-/manifest.06ad7e5f.js
-/client.a415c068.css
-/alla.jpg
-/albin.jpg
-/favicon.ico
-/föl.jpg
-/gräs.jpg
-/hooves.jpg
+/manifest.603e48b5.js
+/client.8e882334.css
 /icons/android-chrome-192x192.png
 /icons/android-chrome-512x512.png
-/kli.jpg
-/emilhopp.jpg
 /manifest.json
+/media/albin.jpg
+/favicon.ico
+/media/alla.jpg
+/media/gräs.jpg
+/media/fol.jpg
+/media/hooves.jpg
+/media/kli.jpg
+/media/emil.jpg
+/media/emilhopp.jpg
+/media/shirin2.jpg
+/media/sto.jpg
 /popups.css
-/emil.jpg
-/shirin.jpg
-/shirin2.jpg
-/sto.jpg
-/emil-hopp.jpg
-/lakritz-hopp.jpg
+/media/shirin.jpg
+/media/emil-hopp.jpg
+/media/lakritz-hopp.jpg
 /
 
 NETWORK:

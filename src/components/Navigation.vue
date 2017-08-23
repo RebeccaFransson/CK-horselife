@@ -124,24 +124,24 @@ export default {
 }
 
 #navigation .navColumn:nth-child(1) .navPicture {
-  background-image: URL('../../static/albin.jpg');
+  background-image: URL('../../static/media/albin.jpg');
 }
 
 #navigation .navColumn:nth-child(2) .navPicture {
-  background-image: URL('../../static/shirin.jpg');
+  background-image: URL('../../static/media/shirin.jpg');
   color: #403427;
 }
 
 #navigation .navColumn:nth-child(3) .navPicture {
-  background-image: URL('../../static/shirin2.jpg');
+  background-image: URL('../../static/media/shirin2.jpg');
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
-  background-image: URL('../../static/sto.jpg');
+  background-image: URL('../../static/media/sto.jpg');
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('../../static/kli.jpg');
+  background-image: URL('../../static/media/kli.jpg');
   background-position: 51%;
 }
 
@@ -154,7 +154,7 @@ export default {
     min-width: 98vw;
   }
   #navigation .navColumn h3 {
-    font-size: 70px;
+    font-size: 40px;
   }
   #navigation .navColumn .navPicture {
     min-height: 20vh;

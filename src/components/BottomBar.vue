@@ -75,10 +75,10 @@ export default {
 /* MOBILE DEVICES */
 @media only screen and (max-device-width: 480px) {
   #bottomBar {
-    font-size: 50px;
+    font-size: 30px;
   }
   #bottomBar .item{
-    min-width: 50vw;
+    min-width: 80vw;
   }
 }
 /* TABLETS */

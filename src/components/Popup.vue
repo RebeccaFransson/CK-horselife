@@ -47,7 +47,7 @@ export default {
 }
 
 #popup .topBar {
-  background-image: url('../../static/alla.jpg');
+  background-image: url('../../static/media/alla.jpg');
   background-position: center;
   background-size: cover;
   color: #403427;
@@ -79,5 +79,18 @@ export default {
 
 #popup.hide {
   display: none;
+}
+
+/* TABLETS AND MOBILE DEVICES */
+@media only screen and (max-device-width: 768px) {
+ #popup{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    width: 99vw;
+  }
+  #popup .popup .text {
+    width: 100%;
+  }
 }
 </style>
