@@ -31,6 +31,7 @@
 
 
 <script>
+//:class="{hide: !popup}" 
 import Popup from './Popup'
 export default {
   name: 'navigation',
@@ -48,10 +49,14 @@ export default {
       this.popup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
+      setTimeout(function(){
+        $('#popup').css('top', '0')
+      }, 500)
     },
     closePopup: function () {
       this.popup = false
       this.showSmallNavPictures(false)
+      this.whichPopup = null
     },
     showSmallNavPictures: function (show) {
       if (show) {
@@ -75,7 +80,7 @@ export default {
 }
 
 #navigation .navColumn {
-  color: #826849;
+  color: #5f482e;
   width: min-content;
   max-width: none;
   min-width: min-content;
@@ -129,11 +134,12 @@ export default {
 
 #navigation .navColumn:nth-child(2) .navPicture {
   background-image: URL('../../static/shirin.jpg');
-  color: #403427;
+  color:#40260a !important;
 }
 
 #navigation .navColumn:nth-child(3) .navPicture {
   background-image: URL('../../static/shirin2.jpg');
+  color:#40260a !important;
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {

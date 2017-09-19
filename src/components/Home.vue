@@ -34,4 +34,8 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.freezeScroll{
+  height: 100%;
+  overflow: hidden;
+}
 </style>

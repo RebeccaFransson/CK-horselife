@@ -3,7 +3,7 @@
     <div class="barItems">
       <div class="item">
         <p><span>Mail</span></p>
-        <div>camillakoster<br>@gmail.com</div>
+        <div>camillakoster@gmail.com</div>
       </div>
       <div class="item">
         <p><span>Telefon</span></p>
@@ -75,16 +75,19 @@ export default {
 /* MOBILE DEVICES */
 @media only screen and (max-device-width: 480px) {
   #bottomBar {
-    font-size: 30px;
+    font-size: 18px;
   }
   #bottomBar .item{
     min-width: 80vw;
   }
+  #bottomBar p {
+  text-align: center;
+}
 }
 /* TABLETS */
 @media only screen and (max-device-width: 768px) and (min-device-width: 480px){
  #bottomBar {
-    font-size: 30px;
+    font-size: 18px;
   }
 }
 </style>
