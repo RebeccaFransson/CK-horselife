@@ -30,12 +30,18 @@ export default {
     closePopup: {
       type: Function
     }
+  },
+  mounted: function(){
+    $('#popup').css('display', 'none')
   }
 }
 </script>
 
 <style>
 #popup {
+  position: relative;
+  top: 0;
+  max-height: 100vh;
   align-self: center;
   width: 97vw;
   min-height: min-content;
@@ -44,7 +50,7 @@ export default {
   border: 1px solid white;
 
   /* transition: all .5s ease; */
-  transition: top 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #popup .topBar {
@@ -80,7 +86,9 @@ export default {
 
 /* When popup is hidden  */
 #popup.hidden{
-  top: 100vh;
+  top: 200vh; 
+  max-height: 0;
+  min-height: 0;
 }
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {
@@ -97,5 +105,9 @@ export default {
 #popup .popup .text {
     width: 100%;
   }
+}
+/* When popup is hidden  */
+#popup.hidden{
+  top: 100vh;
 }
 </style>
