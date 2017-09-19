@@ -44,7 +44,7 @@ export default {
   border: 1px solid white;
 
   /* transition: all .5s ease; */
-  transition: top 1s ease;
+  transition: top 0.8s ease;
 }
 
 #popup .topBar {

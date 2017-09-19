@@ -25,7 +25,7 @@
         <h3>Uppfödning</h3>
       </div>
     </div>
-    <popup :class="{hide: !popup}" :whichPopup="whichPopup" :close-popup="closePopup"></popup>
+    <popup  :whichPopup="whichPopup" :close-popup="closePopup"></popup>
   </div>
 </template>
 
@@ -49,14 +49,18 @@ export default {
       this.popup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
+      $('#popup').removeClass('hide')
       setTimeout(function(){
         $('#popup').css('top', '0')
-      }, 500)
+      }, 100)
     },
     closePopup: function () {
       this.popup = false
       this.showSmallNavPictures(false)
-      this.whichPopup = null
+      $('#popup').css('top', '100vh')
+      setTimeout(function(){
+        $('#popup').addClass('hide')
+      }, 800)
     },
     showSmallNavPictures: function (show) {
       if (show) {
