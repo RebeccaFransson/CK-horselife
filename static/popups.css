@@ -6,7 +6,9 @@
     justify-content: center;
     align-items: center;
 
-    height: min-content;
+
+    height: 450px;
+    overflow-y: auto;
 
     text-align: left;
 }
@@ -18,4 +20,12 @@
 #popup .popup .text{
     width: 30%;
     margin: 20px;
+}
+
+
+/* TABLETS AND MOBILE DEVICES */
+@media only screen and (max-device-width: 768px) {
+  #popup .popup img{
+    width: 90%;
+  }
 }

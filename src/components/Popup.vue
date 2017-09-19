@@ -44,7 +44,7 @@ export default {
   max-height: 100vh;
   align-self: center;
   width: 97vw;
-  min-height: min-content;
+   min-height: min-content; 
   background-color: white;
   margin: auto;
   border: 1px solid white;
@@ -90,6 +90,7 @@ export default {
   max-height: 0;
   min-height: 0;
 }
+
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {
  #popup{
@@ -105,9 +106,11 @@ export default {
 #popup .popup .text {
     width: 100%;
   }
+  
+  /* When popup is hidden  */
+  #popup.hidden{
+    top: 100vh;
+  }
 }
-/* When popup is hidden  */
-#popup.hidden{
-  top: 100vh;
-}
+
 </style>

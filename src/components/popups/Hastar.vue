@@ -1,5 +1,5 @@
 <template>
-  <div id="garden">
+  <div id="hastar" class="popup">
     <div class="text">
       <h2>Libacka Gård</h2>
       Libacka Gård ligger strax söder om Vellinge, utanför Skegrie By. Vi finns endast 20min söder om Malmö och 8min från Trelleborg och Vellinge.
@@ -17,28 +17,13 @@
       Vi har många hagar i olika storlekar och även sommarbete.
     </div>
 
-     <img src="../../../static/alla.jpg" alt="Smiley face">
+     <img src="../../../static/alla.jpg" alt="Everybody">
 
   </div>
 </template>
 <style>
-#garden{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: center;
-
-    text-align: left;
-}
-#garden img {
-    width: 40%;
-    margin: 20px;
-    border: 2px solid #5b4637;
-}
-#garden .text{
-    width: 30%;
-    margin: 20px;
+#hastar{
+  padding-top: 24px;
 }
 </style>
 

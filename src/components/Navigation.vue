@@ -51,6 +51,7 @@ export default {
       this.showSmallNavPictures(true)
       // Animate and show
       $('#popup').css('display', 'block')
+      $('body').addClass('freezeScroll')
       setTimeout(function(){
         $('#popup').removeClass('hidden')
       }, 50)

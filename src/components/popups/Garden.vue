@@ -25,13 +25,21 @@
       </p>
     </div>
 
-     <img src="../../../static/emilhopp.jpg" alt="Smiley face">
+     <img src="../../../static/emilhopp.jpg" alt="Emil hoppar">
 
   </div>
 </template>
 <style>
 #garden{
-
+  padding-top: 80px;
 }
+
+#garden .text{
+    width: 30%;
+    margin: 20px;
+}
+
+
+
 </style>
 

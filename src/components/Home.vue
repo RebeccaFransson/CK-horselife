@@ -29,13 +29,5 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body {
-  background-color: #c4d4dd;
-  width: 100vw;
-  height: 100vh;
-}
-.freezeScroll{
-  height: 100%;
-  overflow: hidden;
-}
+
 </style>

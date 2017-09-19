@@ -30,9 +30,11 @@ body {
   padding: 0;
   background-color: #c4d4dd;
   width: 100vw;
-  height: 100vh;
+  height: 100px;
 }
-
+.freezeScroll{
+  overflow: hidden;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
