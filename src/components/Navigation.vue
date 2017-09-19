@@ -49,18 +49,24 @@ export default {
       this.popup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
-      $('#popup').removeClass('hide')
+      // Animate and show
+      $('#popup').css('display', 'block')
       setTimeout(function(){
-        $('#popup').css('top', '0')
-      }, 100)
+        $('#popup').removeClass('hidden')
+      }, 50)
+      // Scroll up in body with the animation for the slide
+      $('body, html').animate({
+        scrollTop: 0
+      }, 550)
     },
     closePopup: function () {
       this.popup = false
       this.showSmallNavPictures(false)
-      $('#popup').css('top', '100vh')
+      // Animate and hide
+      $('#popup').addClass('hidden')
       setTimeout(function(){
-        $('#popup').addClass('hide')
-      }, 800)
+        $('#popup').css('display', 'none')
+      }, 500)// When 0.5s CSS animation done
     },
     showSmallNavPictures: function (show) {
       if (show) {

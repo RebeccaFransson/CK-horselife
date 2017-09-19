@@ -1,6 +1,6 @@
 <template>
-  <div id="popup">
-    <div :class="{hide: !whichPopup}" class="topBar">
+  <div id="popup" class="hidden">
+    <div class="topBar">
       <h3>{{ whichPopup }}</h3>
       <div class="close" @click="closePopup">&#10006;</div>
     </div>
@@ -44,7 +44,7 @@ export default {
   border: 1px solid white;
 
   /* transition: all .5s ease; */
-  transition: top 0.8s ease;
+  transition: top 0.5s ease;
 }
 
 #popup .topBar {
@@ -78,8 +78,9 @@ export default {
   transform: scale(1.25);
 }
 
-.hide{
-  display: none;
+/* When popup is hidden  */
+#popup.hidden{
+  top: 100vh;
 }
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {
@@ -87,7 +88,7 @@ export default {
     position: absolute;
     height: 100vh;
     width: 100vw;
-    top: 100vh;
+    top: 0;
     left: 0;
   }
 #popup .topBar h3 {
