@@ -17,8 +17,8 @@ export default {
     return {
         index: 0,
         images: [
-            '../../../static/emilhopp.jpg',
-            '../../../static/alla.jpg'
+            '/static/emilhopp.jpg',
+            '/static/alla.jpg'
         ]
     }
   },

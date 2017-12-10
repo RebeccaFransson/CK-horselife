@@ -25,7 +25,7 @@
       </p>
     </div>
 
-     <img class="popupImg" src="../../../static/emilhopp.jpg" alt="Emil hoppar">
+     <img class="popupImg" src="/static/emilhopp.jpg" alt="Emil hoppar">
 
   </div>
 </template>

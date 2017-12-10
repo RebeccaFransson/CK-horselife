@@ -57,7 +57,7 @@ export default {
 }
 
 #popup .topBar {
-  background-image: url('../../static/alla.jpg');
+  background-image: url('/static/alla.jpg');
   background-position: center;
   background-size: cover;
   color: #403427;

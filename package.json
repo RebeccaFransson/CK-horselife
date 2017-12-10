@@ -9,10 +9,8 @@
     "dev": "poi",
     "build": "poi build",
     "report": "poi build --bundle-report",
-    "serve": "serve dist --single",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js"
+    "serve": "serve dist --single"
   },
-  "homepage": "https://github.com/RebeccaFransson/CK-horselife/",
   "babel": {
     "presets": [
       [
@@ -32,9 +30,7 @@
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.0.2",
     "vue-gallery": "^1.2.4",
-    "vue-gh-pages": "^1.6.4",
-    "yarn": "^1.3.2",
-    "year": "^0.2.1"
+    "yarn": "^1.3.2"
   },
   "devDependencies": {
     "poi": "^9.0.0",
