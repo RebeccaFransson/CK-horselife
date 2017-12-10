@@ -7,6 +7,7 @@
     <inackodering v-if="whichPopup === 'Inackodering'"></inackodering>
     <garden v-if="whichPopup === 'Gården'"></garden>
     <hastar v-if="whichPopup === 'Hästar'"></hastar>
+    <galleri v-if="whichPopup === 'Galleri'"></galleri>
   
   </div>
 </template>
@@ -15,13 +16,15 @@
 import Inackodering from './popups/Inackodering'
 import Garden from './popups/Garden'
 import Hastar from './popups/Hastar'
+import Gallery from './popups/Gallery'
 
 export default {
   name: 'popup',
   components: {
     inackodering: Inackodering,
     garden: Garden,
-    hastar: Hastar
+    hastar: Hastar,
+    galleri: Gallery
   },
   props: {
     whichPopup: {

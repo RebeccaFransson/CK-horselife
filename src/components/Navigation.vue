@@ -25,7 +25,12 @@
         <h3>Uppfödning</h3>
       </div>
     </div>
-    <popup  :whichPopup="whichPopup" :close-popup="closePopup"></popup>
+    <div class="navColumn">
+      <div @click="openPopup('Galleri')" class="navPicture">
+        <h3>Galleri</h3>
+      </div>
+    </div>
+    <popup :whichPopup="whichPopup" :close-popup="closePopup"></popup>
   </div>
 </template>
 

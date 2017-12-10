@@ -3,11 +3,11 @@
     <div class="barItems">
       <div class="item">
         <p><span>Mail</span></p>
-        <div>camillakoster@gmail.com</div>
+        <div>ckhorselife<br>@gmail.com</div>
       </div>
       <div class="item">
         <p><span>Telefon</span></p>
-        <div>0766167501</div>
+        <div>0730-284544</div>
       </div>
       <div class="item">
         <p><span>Adress</span></p>

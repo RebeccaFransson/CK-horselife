@@ -32,7 +32,7 @@
             </p>
         </div>
 
-        <img src="../../../static/fol.jpg" alt="Smiley face">
+        <img class="popupImg" src="../../../static/fol.jpg" alt="Smiley face">
 
     </div>
 </template>
