@@ -2,6 +2,14 @@
 
 > My brilliant Vue project
 
+# How to distribute it
+npm run dev
+npm run serve
+Move images to static
+Check that it works with serve again
+Change dist-folder to docs-folder
+Push to github
+
 ## Commands
 
 You can replace `yarn` with `npm run` here.
