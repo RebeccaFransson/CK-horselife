@@ -8,7 +8,7 @@
     <garden v-if="whichPopup === 'Gården'"></garden>
     <hastar v-if="whichPopup === 'Hästar'"></hastar>
     <galleri v-if="whichPopup === 'Galleri'"></galleri>
-  
+    <events v-if="whichPopup === 'Events'"></events>
   </div>
 </template>
 
@@ -17,6 +17,7 @@ import Inackodering from './popups/Inackodering'
 import Garden from './popups/Garden'
 import Hastar from './popups/Hastar'
 import Gallery from './popups/Gallery'
+import Events from './popups/Events'
 
 export default {
   name: 'popup',
@@ -24,7 +25,8 @@ export default {
     inackodering: Inackodering,
     garden: Garden,
     hastar: Hastar,
-    galleri: Gallery
+    galleri: Gallery,
+    events: Events
   },
   props: {
     whichPopup: {

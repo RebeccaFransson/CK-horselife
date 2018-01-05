@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Galleri')" class="navPicture">
+      <div @click="openPopup('Events')" class="navPicture">
         <h3>Events</h3>
       </div>
     </div>
