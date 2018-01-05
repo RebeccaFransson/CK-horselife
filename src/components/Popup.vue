@@ -1,31 +1,37 @@
 <template>
   <div id="popup" class="hidden">
     <div class="topBar">
-      <h3>{{ whichPopup }}</h3>
       <div class="close" @click="closePopup">&#10006;</div>
-    </div>
-    <inackodering v-if="whichPopup === 'Inackodering'"></inackodering>
-    <garden v-if="whichPopup === 'Gården'"></garden>
-    <hastar v-if="whichPopup === 'Hästar'"></hastar>
-    <galleri v-if="whichPopup === 'Galleri'"></galleri>
-    <events v-if="whichPopup === 'Events'"></events>
+    </div> 
+    <rentBox   v-if="whichPopup === rentBox"></rentBox>
+    <theFarm   v-if="whichPopup === theFarm"></theFarm>
+    <riding    v-if="whichPopup === riding"></riding>
+    <breeding  v-if="whichPopup === breeding"></breeding>
+    <horses    v-if="whichPopup === horses"></horses>
+    <gallery   v-if="whichPopup === gallery"></gallery>
+    <events    v-if="whichPopup === events"></events>
   </div>
 </template>
 
 <script>
-import Inackodering from './popups/Inackodering'
-import Garden from './popups/Garden'
-import Hastar from './popups/Hastar'
+/***/
+import TheFarm from './popups/TheFarm'
+import RentBox from './popups/RentBox'
+import Riding from './popups/Riding'
+import Breeding from './popups/Breeding'
+import Horses from './popups/Horses'
 import Gallery from './popups/Gallery'
 import Events from './popups/Events'
 
 export default {
   name: 'popup',
   components: {
-    inackodering: Inackodering,
-    garden: Garden,
-    hastar: Hastar,
-    galleri: Gallery,
+    theFarm: TheFarm,
+    rentBox: RentBox,
+    riding: Riding,
+    breeding: Breeding,
+    horses: Horses,
+    gallery: Gallery,
     events: Events
   },
   props: {
@@ -36,8 +42,49 @@ export default {
       type: Function
     }
   },
-  mounted: function(){
+  /**BYT UT DESSA TILL EGEN FIL SÅ BÅDE NAVIGATION OCH POPUP KAN ANVÄNDA */
+  data: () => {
+    return {
+      popupName: '',
+      rentBox:  'rentBox',
+      theFarm:  'theFarm',
+      riding:   'riding',
+      breeding: 'breeding',
+      horses:   'horses',
+      gallery:  'gallery',
+      events:   'events'
+    }
+  },
+  mounted: () =>{
     $('#popup').css('display', 'none')
+  },
+  /** ta bort? */
+  watch: {
+    whichPopup: () => {
+      console.log('watch popup')
+      /*() => {
+        console.warn(whichPopup)
+        switch (whichPopup) {
+          case this.rentBox:
+            return 'Inackodering'
+          case this.theFarm:
+            return 'Gården'
+          case this.riding:
+            return 'Medryttare'
+          case this.breeding:
+            return 'Uppfödning'
+          case this.horses:
+            return 'Hästar'
+          case this.gallery:
+            return 'Galleri'
+          case this.events:
+            return 'Event'
+          default:
+            return '';
+        }
+        return ''
+      }*/
+    }
   }
 }
 </script>
@@ -49,32 +96,22 @@ export default {
   max-height: 100vh;
   align-self: center;
   width: 97vw;
-   min-height: min-content; 
+  min-height: min-content; 
   background-color: white;
   margin: auto;
   border: 1px solid white;
 
-  /* transition: all .5s ease; */
   transition: all 0.5s ease;
 }
 
 #popup .topBar {
-  background-image: url('/static/alla.jpg');
+  /*background-image: url('/static/alla.jpg');
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
   color: #403427;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 10px;
-}
-
-#popup .topBar h3 {
-  font-size: 250%;
-  text-align: center;
-  margin: 0;
-  border: 3px solid white;
-  background-color: rgba(255, 255, 255, 0.39);
-  padding: 0 10px;
 }
 
 #popup .topBar .close {

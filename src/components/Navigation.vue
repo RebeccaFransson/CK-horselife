@@ -1,37 +1,37 @@
 <template>
   <div id="navigation" class="popup">
     <div class="navColumn">
-      <div @click="openPopup('Gården')" class="navPicture">
+      <div @click="openPopup('theFarm')" class="navPicture">
         <h3>Gården</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Hästar')" class="navPicture">
+      <div @click="openPopup('horses')" class="navPicture">
         <h3>Hästar</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Inackodering')" class="navPicture">
+      <div @click="openPopup('rentBox')" class="navPicture">
         <h3>Inackodering</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Medryttare')" class="navPicture">
+      <div @click="openPopup('riding')" class="navPicture">
         <h3>Medryttare</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Uppföding')" class="navPicture">
+      <div @click="openPopup('breeding')" class="navPicture">
         <h3>Uppfödning</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Galleri')" class="navPicture">
+      <div @click="openPopup('gallery')" class="navPicture">
         <h3>Galleri</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('Events')" class="navPicture">
+      <div @click="openPopup('events')" class="navPicture">
         <h3>Events</h3>
       </div>
     </div>
@@ -50,13 +50,13 @@ export default {
   },
   data() {
     return {
-      popup: false,
+      showPopup: false,
       whichPopup: ''
     }
   },
   methods: {
     openPopup: function (which) {
-      this.popup = true
+      this.showPopup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
       // Animate and show
@@ -71,7 +71,7 @@ export default {
       }, 550)
     },
     closePopup: function () {
-      this.popup = false
+      this.showPopup = false
       this.showSmallNavPictures(false)
       // Animate and hide
       $('#popup').addClass('hidden')

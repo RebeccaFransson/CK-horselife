@@ -1,6 +1,6 @@
 <template>
   <div id="gallery" class="popup">
-    Här kommer vi publicera event senare
+    Information om att vara medryttare och lektioner?
   </div>
 </template>
 <style>
