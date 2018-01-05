@@ -1,37 +1,37 @@
 <template>
   <div id="navigation" class="popup">
     <div class="navColumn">
-      <div @click="openPopup('theFarm')" class="navPicture">
+      <div @click="openPopup('theFarm', $event)" class="navPicture">
         <h3>Gården</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('horses')" class="navPicture">
+      <div @click="openPopup('horses', $event)" class="navPicture">
         <h3>Hästar</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('rentBox')" class="navPicture">
+      <div @click="openPopup('rentBox', $event)" class="navPicture">
         <h3>Inackodering</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('riding')" class="navPicture">
+      <div @click="openPopup('riding', $event)" class="navPicture">
         <h3>Medryttare</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('breeding')" class="navPicture">
+      <div @click="openPopup('breeding', $event)" class="navPicture">
         <h3>Uppfödning</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('gallery')" class="navPicture">
+      <div @click="openPopup('gallery', $event)" class="navPicture">
         <h3>Galleri</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('events')" class="navPicture">
+      <div @click="openPopup('events', $event)" class="navPicture">
         <h3>Events</h3>
       </div>
     </div>
@@ -55,11 +55,14 @@ export default {
     }
   },
   methods: {
-    openPopup: function (which) {
+    openPopup: function (which, e) {
+      // Show popup and set which one
       this.showPopup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
-      // Animate and show
+      // Set the selected to active
+      $(e.target).addClass('active')
+      // Animate and show popup
       $('#popup').css('display', 'block')
       $('body').addClass('freezeScroll')
       setTimeout(function(){
@@ -147,6 +150,10 @@ export default {
 #navigation .navColumn .navPicture.small {
   min-height: 10vh;
   margin: 0.5vh 0;
+}
+
+#navigation .navColumn .navPicture.active {
+  border: green 1px solid;
 }
 
 #navigation .navColumn .navPicture:hover {
