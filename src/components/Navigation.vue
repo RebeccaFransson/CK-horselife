@@ -54,14 +54,15 @@ export default {
       whichPopup: ''
     }
   },
+
   methods: {
     openPopup: function (which, e) {
       // Show popup and set which one
       this.showPopup = true
       this.whichPopup = which
       this.showSmallNavPictures(true)
-      // Set the selected to active
-      $(e.target).addClass('active')
+      // Set the non selected popup to unactive
+      this.addUnactiveToAllExceptOne(this.findActivePictureElement(e.target));
       // Animate and show popup
       $('#popup').css('display', 'block')
       $('body').addClass('freezeScroll')
@@ -88,6 +89,23 @@ export default {
       } else {
         $('.navPicture').removeClass('small')
       }
+    },
+    addUnactiveToAllExceptOne: (activeElement) =>{
+      const pictures = $('.navPicture')
+      // Remove all unactive classes
+      pictures.removeClass('unactive')
+      pictures.each((index, element) => {
+        // If it is not the active elment then set unactive class
+        if(element !== activeElement){
+          $(element).addClass('unactive')
+        }
+      }) 
+    },
+    findActivePictureElement: (element) => {
+      if(!element.className.includes('navPicture')){
+        return element.parentElement
+      }
+      return element
     }
   }
 }
@@ -152,8 +170,8 @@ export default {
   margin: 0.5vh 0;
 }
 
-#navigation .navColumn .navPicture.active {
-  border: green 1px solid;
+#navigation .navColumn .navPicture.unactive {
+  opacity: 0.3;
 }
 
 #navigation .navColumn .navPicture:hover {
