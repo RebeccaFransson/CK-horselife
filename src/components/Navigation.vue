@@ -30,6 +30,11 @@
         <h3>Galleri</h3>
       </div>
     </div>
+    <div class="navColumn">
+      <div @click="openPopup('Galleri')" class="navPicture">
+        <h3>Events</h3>
+      </div>
+    </div>
     <popup :whichPopup="whichPopup" :close-popup="closePopup"></popup>
   </div>
 </template>
@@ -95,12 +100,13 @@ export default {
   min-height: 340px;
 }
 
+
 #navigation .navColumn {
   color: #5f482e;
   width: min-content;
   max-width: none;
   min-width: min-content;
-  margin: 2vh 1.5vw;
+  margin: 0 1vw;
 
   display: flex;
   flex-direction: column;
@@ -118,12 +124,14 @@ export default {
   background-color: rgba(250, 235, 215, 0.49);
 }
 
+
 #navigation .navColumn .navPicture {
-  max-height: 50vh;
+  min-height: 50vh;
+  min-width: 16vw;
+  margin: 1vh 0;
   display: flex;
   align-items: flex-start;
   width: 100%;
-  min-height: 70vh;
   justify-content: center;
 
   background-position: center;
@@ -138,6 +146,7 @@ export default {
 
 #navigation .navColumn .navPicture.small {
   min-height: 10vh;
+  margin: 0.5vh 0;
 }
 
 #navigation .navColumn .navPicture:hover {
@@ -163,8 +172,17 @@ export default {
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('/static/kli.jpg');
+  background-image: URL('/static/fol.jpg');
   background-position: 51%;
+}
+
+#navigation .navColumn:nth-child(6) .navPicture {
+  background-image: URL('/static/kli.jpg');
+}
+
+#navigation .navColumn:nth-child(7) .navPicture {
+  background-image: URL('/static/emilhopp.jpg');
+  color:#40260a !important;
 }
 
 

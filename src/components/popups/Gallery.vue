@@ -54,9 +54,12 @@ export default {
   margin: 5px;
   height: 200px !important;
   min-width: 200px !important;
+  transition: all .5s;
 }
 #gallery .image:hover{
   cursor: pointer;
+  transform: scale(1.04);
+  border-radius: 5px;
 }
 
 #gallery img{
