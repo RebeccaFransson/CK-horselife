@@ -26,15 +26,16 @@
     "email": "rebecca@kollektiva.se"
   },
   "dependencies": {
+    "babel-preset-vue-app": "^2.0.0",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
-    "promise-polyfill": "^6.0.2",
-    "vue-gallery": "^1.2.4",
+    "promise-polyfill": "^6.1.0",
+    "vue-gallery": "^1.2.5",
     "yarn": "^1.3.2"
   },
   "devDependencies": {
-    "poi": "^9.0.0",
-    "poi-preset-bundle-report": "^2.0.0",
+    "poi": "^9.6.9",
+    "poi-preset-bundle-report": "^2.0.2",
     "serve": "^3.1.0"
   }
 }
