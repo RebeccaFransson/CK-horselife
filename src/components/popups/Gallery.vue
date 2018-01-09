@@ -45,7 +45,7 @@ export default {
 </script>
 <style>
 #gallery{
-  padding-top: 80px;
+  padding-top: 30px;
 }
 
 #gallery .image{

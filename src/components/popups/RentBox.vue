@@ -45,9 +45,7 @@ export default {
 
 
 <style>
-#inackodering{
-  padding-top: 200px;
-}
+
 #inackodering .orange{
     background-color: #ffd3a4;
 }

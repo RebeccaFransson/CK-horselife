@@ -1,3 +1,8 @@
+/*
+This is for the popups content
+The css for the popups shell can be found in the popup.vue
+*/
+
 #popup .popup{
     display: flex;
     flex-wrap: wrap;
@@ -6,11 +11,13 @@
     justify-content: center;
     align-items: center;
 
-
-    height: 450px;
+    /*height: 100%;*/
     overflow-y: auto;
 
     text-align: left;
+}
+#popup .popup h2 {
+    margin: 0;
 }
 #popup .popup .popupImg {
     width: 40%;

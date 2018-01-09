@@ -30,9 +30,7 @@
   </div>
 </template>
 <style>
-#garden{
-  padding-top: 80px;
-}
+
 
 #garden .text{
     width: 30%;

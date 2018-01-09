@@ -2,6 +2,7 @@
   <div id="hastar" class="popup">
     <div class="text">
       <h2>Libacka Gård</h2>
+      <br>
       Libacka Gård ligger strax söder om Vellinge, utanför Skegrie By. Vi finns endast 20min söder om Malmö och 8min från Trelleborg och Vellinge.
       <br>
       Gården är över 100år gammal men själva hästbiten började byggas 2001 när vi flyttade hem från Portugal.
@@ -22,8 +23,6 @@
   </div>
 </template>
 <style>
-#hastar{
-  padding-top: 24px;
-}
+
 </style>
 

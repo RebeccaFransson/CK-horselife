@@ -57,34 +57,6 @@ export default {
   },
   mounted: () =>{
     $('#popup').css('display', 'none')
-  },
-  /** ta bort? */
-  watch: {
-    whichPopup: () => {
-      console.log('watch popup')
-      /*() => {
-        console.warn(whichPopup)
-        switch (whichPopup) {
-          case this.rentBox:
-            return 'Inackodering'
-          case this.theFarm:
-            return 'Gården'
-          case this.riding:
-            return 'Medryttare'
-          case this.breeding:
-            return 'Uppfödning'
-          case this.horses:
-            return 'Hästar'
-          case this.gallery:
-            return 'Galleri'
-          case this.events:
-            return 'Event'
-          default:
-            return '';
-        }
-        return ''
-      }*/
-    }
   }
 }
 </script>
@@ -93,10 +65,11 @@ export default {
 #popup {
   position: relative;
   top: 0;
-  max-height: 100vh;
+  height: 100vh;
+  overflow: scroll;
   align-self: center;
-  width: 97vw;
-  min-height: min-content; 
+  width: 98vw;
+  /*min-height: min-content;*/ 
   background-color: white;
   margin: auto;
   border: 1px solid white;
@@ -137,13 +110,12 @@ export default {
 @media only screen and (max-device-width: 768px) {
  #popup{
     position: absolute;
-    height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
   }
-#popup .topBar h3 {
-  font-size: 200%;
+#popup .topBar {
+  padding: 10px !important;
 }
 #popup .popup .text {
     width: 100%;

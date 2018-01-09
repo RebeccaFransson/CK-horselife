@@ -74,16 +74,20 @@ export default {
         scrollTop: 0
       }, 550)
     },
-    closePopup: function () {
+    closePopup: function() {
+       // Remove all unactive classes - TODO: Change this to function
+      const pictures = $('.navPicture')
+      pictures.removeClass('unactive')
+      //Close the popup
       this.showPopup = false
       this.showSmallNavPictures(false)
       // Animate and hide
       $('#popup').addClass('hidden')
-      setTimeout(function(){
+      setTimeout(() => {
         $('#popup').css('display', 'none')
       }, 500)// When 0.5s CSS animation done
     },
-    showSmallNavPictures: function (show) {
+    showSmallNavPictures: (show) => {
       if (show) {
         $('.navPicture').addClass('small')
       } else {
@@ -91,8 +95,8 @@ export default {
       }
     },
     addUnactiveToAllExceptOne: (activeElement) =>{
+       // Remove all unactive classes
       const pictures = $('.navPicture')
-      // Remove all unactive classes
       pictures.removeClass('unactive')
       pictures.each((index, element) => {
         // If it is not the active elment then set unactive class
@@ -106,6 +110,11 @@ export default {
         return element.parentElement
       }
       return element
+    }, 
+    removeAllUnactive: function() {
+      // Remove all unactive classes
+      const pictures = $('.navPicture')
+      pictures.removeClass('unactive')
     }
   }
 }
@@ -172,6 +181,10 @@ export default {
 
 #navigation .navColumn .navPicture.unactive {
   opacity: 0.3;
+}
+
+#navigation .navColumn .navPicture.unactive:hover {
+  opacity: 0.6;
 }
 
 #navigation .navColumn .navPicture:hover {
