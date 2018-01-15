@@ -89,9 +89,14 @@ export default {
   background-position: center;
   background-size: cover;*/
   color: #403427;
+  background-color: rgba(200,200,200,0.0);
   display: flex;
   justify-content: flex-end;
+  
   padding: 10px;
+  background-image: linear-gradient(
+      rgba(200,200,200,1.0), rgba(200,200,200,0.0)
+    );
 }
 
 #popupWrapper .topBar .close {
