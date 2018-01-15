@@ -3,7 +3,7 @@ This is for the popups content
 The css for the popups shell can be found in the popup.vue
 */
 
-#popup .popup{
+#popupWrapper .popup{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -16,15 +16,15 @@ The css for the popups shell can be found in the popup.vue
 
     text-align: left;
 }
-#popup .popup h2 {
+#popupWrapper .popup h2 {
     margin: 0;
 }
-#popup .popup .popupImg {
+#popupWrapper .popup .popupImg {
     width: 40%;
     margin: 20px;
     border: 2px solid #5b4637;
 }
-#popup .popup .text{
+#popupWrapper .popup .text{
     width: 30%;
     margin: 20px;
 }
@@ -32,7 +32,10 @@ The css for the popups shell can be found in the popup.vue
 
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {
-  #popup .popup img{
-    width: 90%;
+  #popupWrapper .popup img{
+    width: 80%  !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
   }
 }

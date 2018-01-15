@@ -64,10 +64,10 @@ export default {
       // Set the non selected popup to unactive
       this.addUnactiveToAllExceptOne(this.findActivePictureElement(e.target));
       // Animate and show popup
-      $('#popup').css('display', 'block')
+      $('#popupWrapper').css('display', 'block')
       $('body').addClass('freezeScroll')
       setTimeout(function(){
-        $('#popup').removeClass('hidden')
+        $('#popupWrapper').removeClass('hidden')
       }, 50)
       // Scroll up in body with the animation for the slide
       $('body, html').animate({
@@ -82,9 +82,9 @@ export default {
       this.showPopup = false
       this.showSmallNavPictures(false)
       // Animate and hide
-      $('#popup').addClass('hidden')
+      $('#popupWrapper').addClass('hidden')
       setTimeout(() => {
-        $('#popup').css('display', 'none')
+        $('#popupWrapper').css('display', 'none')
       }, 500)// When 0.5s CSS animation done
     },
     showSmallNavPictures: (show) => {

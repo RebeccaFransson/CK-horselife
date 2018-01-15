@@ -1,15 +1,17 @@
 <template>
-  <div id="popup" class="hidden">
+  <div id="popupWrapper" class="hidden">
     <div class="topBar">
       <div class="close" @click="closePopup">&#10006;</div>
-    </div> 
-    <rentBox   v-if="whichPopup === rentBox"></rentBox>
-    <theFarm   v-if="whichPopup === theFarm"></theFarm>
-    <riding    v-if="whichPopup === riding"></riding>
-    <breeding  v-if="whichPopup === breeding"></breeding>
-    <horses    v-if="whichPopup === horses"></horses>
-    <gallery   v-if="whichPopup === gallery"></gallery>
-    <events    v-if="whichPopup === events"></events>
+    </div>
+    <div id="popupScroll">
+      <rentBox   v-if="whichPopup === rentBox"></rentBox>
+      <theFarm   v-if="whichPopup === theFarm"></theFarm>
+      <riding    v-if="whichPopup === riding"></riding>
+      <breeding  v-if="whichPopup === breeding"></breeding>
+      <horses    v-if="whichPopup === horses"></horses>
+      <gallery   v-if="whichPopup === gallery"></gallery>
+      <events    v-if="whichPopup === events"></events>
+    </div>
   </div>
 </template>
 
@@ -56,28 +58,33 @@ export default {
     }
   },
   mounted: () =>{
-    $('#popup').css('display', 'none')
+    $('#popupWrapper').css('display', 'none')
   }
 }
 </script>
 
 <style>
-#popup {
+#popupWrapper {
   position: relative;
   top: 0;
-  height: 100vh;
-  overflow: scroll;
+  height: 58vh;
+  overflow: hidden;
   align-self: center;
-  width: 98vw;
+  width: 97vw;
   /*min-height: min-content;*/ 
   background-color: white;
   margin: auto;
-  border: 1px solid white;
+  border: 8px solid white;
 
   transition: all 0.5s ease;
 }
+#popupScroll {
+  /*Need to have an height to set scroll */
+  height: 85%;
+  overflow: scroll;
+}
 
-#popup .topBar {
+#popupWrapper .topBar {
   /*background-image: url('/static/alla.jpg');
   background-position: center;
   background-size: cover;*/
@@ -87,7 +94,7 @@ export default {
   padding: 10px;
 }
 
-#popup .topBar .close {
+#popupWrapper .topBar .close {
   cursor: pointer;
   font-size: 250%;
   padding: 0 15px;
@@ -95,12 +102,12 @@ export default {
   transition: all .5s ease;
 }
 
-#popup .topBar .close:hover {
+#popupWrapper .topBar .close:hover {
   transform: scale(1.25);
 }
 
 /* When popup is hidden  */
-#popup.hidden{
+#popupWrapper.hidden{
   top: 200vh; 
   max-height: 0;
   min-height: 0;
@@ -108,21 +115,22 @@ export default {
 
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {
- #popup{
+ #popupWrapper{
     position: absolute;
+    height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
   }
-#popup .topBar {
-  padding: 10px !important;
-}
-#popup .popup .text {
+  #popupWrapper .topBar {
+    padding: 10px !important;
+  }
+  #popupWrapper .popup .text {
     width: 100%;
   }
-  
+    
   /* When popup is hidden  */
-  #popup.hidden{
+  #popupWrapper.hidden{
     top: 100vh;
   }
 }
