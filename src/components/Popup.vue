@@ -80,23 +80,21 @@ export default {
 }
 #popupScroll {
   /*Need to have an height to set scroll */
-  height: 85%;
+  height: 100%;
   overflow: scroll;
+  position: relative;
+  bottom: 75px;
 }
 
 #popupWrapper .topBar {
-  /*background-image: url('/static/alla.jpg');
-  background-position: center;
-  background-size: cover;*/
   color: #403427;
-  background-color: rgba(200,200,200,0.0);
   display: flex;
   justify-content: flex-end;
   
   padding: 10px;
-  background-image: linear-gradient(
-      rgba(200,200,200,1.0), rgba(200,200,200,0.0)
-    );
+  /* On top of popupScroll */
+  z-index: 20;
+  position: relative;
 }
 
 #popupWrapper .topBar .close {
@@ -122,7 +120,7 @@ export default {
 @media only screen and (max-device-width: 768px) {
  #popupWrapper{
     position: absolute;
-    height: 100vh;
+    height: 102vh;
     width: 100vw;
     top: 0;
     left: 0;

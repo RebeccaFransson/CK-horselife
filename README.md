@@ -3,11 +3,16 @@
 > My brilliant Vue project
 
 # How to distribute it
-npm run dev
+npm run build
+
 npm run serve
-Move images to static
+
+Move images to new static folder
+
 Check that it works with serve again
+
 Change dist-folder to docs-folder
+
 Push to github
 
 ## Commands

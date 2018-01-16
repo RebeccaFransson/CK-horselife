@@ -11,13 +11,13 @@ The css for the popups shell can be found in the popup.vue
     justify-content: center;
     align-items: center;
 
-    /*height: 100%;*/
     overflow-y: auto;
-
     text-align: left;
 }
-#popupWrapper .popup h2 {
-    margin: 0;
+#popupScroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #popupWrapper .popup .popupImg {
     width: 40%;
@@ -25,17 +25,21 @@ The css for the popups shell can be found in the popup.vue
     border: 2px solid #5b4637;
 }
 #popupWrapper .popup .text{
-    width: 30%;
+    width: 50%;
     margin: 20px;
 }
 
+/* SMALL SCREENS */
 
 /* TABLETS AND MOBILE DEVICES */
-@media only screen and (max-device-width: 768px) {
-  #popupWrapper .popup img{
+@media only screen and (max-width: 868px){
+  #popupScroll img{
     width: 80%  !important;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
   }
+  #popupScroll .text{
+    width: 90% !important;
+    }
 }

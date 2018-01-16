@@ -72,7 +72,7 @@ export default {
       // Scroll up in body with the animation for the slide
       $('body, html').animate({
         scrollTop: 0
-      }, 550)
+      }, 700)
     },
     closePopup: function() {
        // Remove all unactive classes - TODO: Change this to function
@@ -83,6 +83,7 @@ export default {
       this.showSmallNavPictures(false)
       // Animate and hide
       $('#popupWrapper').addClass('hidden')
+      $('body').removeClass('freezeScroll')
       setTimeout(() => {
         $('#popupWrapper').css('display', 'none')
       }, 500)// When 0.5s CSS animation done
