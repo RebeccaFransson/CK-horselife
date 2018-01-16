@@ -13,6 +13,8 @@ Check that it works with serve again
 
 Change dist-folder to docs-folder
 
+(Change /static to /newSite/static in all files that is in error in the console)
+
 Push to github
 
 ## Commands

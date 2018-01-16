@@ -68,11 +68,11 @@ export default {
       $('body').addClass('freezeScroll')
       setTimeout(function(){
         $('#popupWrapper').removeClass('hidden')
-      }, 50)
+      }, 0)
       // Scroll up in body with the animation for the slide
       $('body, html').animate({
         scrollTop: 0
-      }, 700)
+      }, 0)
     },
     closePopup: function() {
        // Remove all unactive classes - TODO: Change this to function

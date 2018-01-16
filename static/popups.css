@@ -33,7 +33,7 @@ The css for the popups shell can be found in the popup.vue
 
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-width: 868px){
-  #popupScroll img{
+  #popupScroll .popupImg{
     width: 80%  !important;
     margin-left: auto;
     margin-right: auto;
