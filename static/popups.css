@@ -19,21 +19,26 @@ The css for the popups shell can be found in the popup.vue
     flex-wrap: wrap;
     justify-content: center;
 }
-#popupWrapper .popup .popupImg {
-    width: 40%;
-    margin: 20px;
-    border: 2px solid #5b4637;
-}
 #popupWrapper .popup .text{
-    width: 50%;
+    width: 35%;
     margin: 20px;
 }
+#popupWrapper .popup .image {
+    max-width: 50%;
+    max-height: 50vh;
+    margin: 20px;
+}
+#popupWrapper .popup .image img {
+    width: 100%;
+    border: 2px solid #5f482e;
+}
+
 
 /* SMALL SCREENS */
 
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-width: 868px){
-  #popupScroll .popupImg{
+  #popupScroll .image{
     width: 80%  !important;
     margin-left: auto;
     margin-right: auto;

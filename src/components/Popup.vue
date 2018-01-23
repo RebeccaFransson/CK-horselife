@@ -76,7 +76,7 @@ export default {
   margin: auto;
   border: 8px solid white;
 
-  transition: all 0.5s ease;
+  transition: all 2.5s ease;
 }
 #popupScroll {
   /*Need to have an height to set scroll */
@@ -107,13 +107,6 @@ export default {
 
 #popupWrapper .topBar .close:hover {
   transform: scale(1.25);
-}
-
-/* When popup is hidden  */
-#popupWrapper.hidden{
-  top: 200vh; 
-  max-height: 0;
-  min-height: 0;
 }
 
 /* TABLETS AND MOBILE DEVICES */

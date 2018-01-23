@@ -57,22 +57,20 @@ export default {
 
   methods: {
     openPopup: function (which, e) {
-      // Show popup and set which one
-      this.showPopup = true
-      this.whichPopup = which
-      this.showSmallNavPictures(true)
-      // Set the non selected popup to unactive
-      this.addUnactiveToAllExceptOne(this.findActivePictureElement(e.target));
-      // Animate and show popup
-      $('#popupWrapper').css('display', 'block')
-      $('body').addClass('freezeScroll')
-      setTimeout(function(){
-        $('#popupWrapper').removeClass('hidden')
-      }, 0)
       // Scroll up in body with the animation for the slide
       $('body, html').animate({
         scrollTop: 0
-      }, 0)
+      }, 500)
+      // Show popup and set which one
+      this.showPopup = true
+      this.whichPopup = which
+      // Set the non selected popup to unactive
+      this.addUnactiveToAllExceptOne(this.findActivePictureElement(e.target));
+      // Show popup and freeze
+      $('#popupWrapper').css('display', 'block')
+      $('body').addClass('freezeScroll')
+      // Animate to small pictures
+      this.showSmallNavPictures(true)
     },
     closePopup: function() {
        // Remove all unactive classes - TODO: Change this to function
@@ -80,13 +78,13 @@ export default {
       pictures.removeClass('unactive')
       //Close the popup
       this.showPopup = false
-      this.showSmallNavPictures(false)
       // Animate and hide
-      $('#popupWrapper').addClass('hidden')
       $('body').removeClass('freezeScroll')
       setTimeout(() => {
         $('#popupWrapper').css('display', 'none')
       }, 500)// When 0.5s CSS animation done
+      // Animate to big pictures
+      this.showSmallNavPictures(false)
     },
     showSmallNavPictures: (show) => {
       if (show) {

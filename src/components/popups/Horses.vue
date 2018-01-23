@@ -17,8 +17,10 @@
       <br>
       Vi har många hagar i olika storlekar och även sommarbete.
     </div>
-
-     <img class="popupImg" src="/static/alla.jpg" alt="Everybody">
+    <div class="image">
+      <img class="popupImg" src="/static/alla.jpg" alt="Alla hästarna">
+    </div>
+     
 
   </div>
 </template>

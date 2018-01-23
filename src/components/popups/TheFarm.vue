@@ -24,9 +24,9 @@
       Vi har många hagar i olika storlekar och även sommarbete.
       </p>
     </div>
-
-     <img class="popupImg" src="/static/emilhopp.jpg" alt="Emil hoppar">
-
+    <div class="image">
+      <img src="/static/emilhopp.jpg" alt="Emil hoppar">
+    </div>
   </div>
 </template>
 <style>

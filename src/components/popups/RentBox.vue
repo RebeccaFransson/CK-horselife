@@ -32,8 +32,10 @@
             </p>
         </div>
 
-        <img class="popupImg" src="/static/fol.jpg" alt="Smiley face">
-
+        <div class="image">
+            <img class="popupImg" src="/static/fol.jpg" alt="Hästar i hagen en sommar kväll">
+        </div>
+        
     </div>
 </template>
 
