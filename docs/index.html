@@ -1,1 +1,45 @@
-<!DOCTYPE html><html><head><meta http-equiv="Content-type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script><link href="/newSite/static/popups.css" rel="stylesheet"><title>CK-horselife</title><meta name="description" content="My brilliant Vue project"><link rel="preload" href="/newSite/client.c877d07a.js" as="script"><link rel="preload" href="/newSite/client.4baabb4a.css" as="style"><link rel="preload" href="/newSite/vendor.430a1462.js" as="script"><link rel="preload" href="/newSite/vendor.ea62d001.css" as="style"><link rel="preload" href="/newSite/manifest.27cf99f5.js" as="script"><link href="/newSite/vendor.ea62d001.css" rel="stylesheet"><link href="/newSite/client.4baabb4a.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="app"></div><script type="text/javascript" src="/newSite/manifest.27cf99f5.js"></script><script type="text/javascript" src="/newSite/vendor.430a1462.js"></script><script type="text/javascript" src="/newSite/client.c877d07a.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link href="static/popups.css" rel="stylesheet">
+    <title>CK-horselife</title>
+    <meta name="description" content="My brilliant Vue project">
+    <link rel="preload" href="client.c877d07a.js" as="script">
+    <link rel="preload" href="client.4baabb4a.css" as="style">
+    <link rel="preload" href="vendor.430a1462.js" as="script">
+    <link rel="preload" href="vendor.ea62d001.css" as="style">
+    <link rel="preload" href="manifest.27cf99f5.js" as="script">
+    <link href="vendor.ea62d001.css" rel="stylesheet">
+    <link href="client.4baabb4a.css" rel="stylesheet">
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="app"></div>
+    <script type="text/javascript" src="manifest.27cf99f5.js"></script>
+    <script type="text/javascript" src="vendor.430a1462.js"></script>
+    <script type="text/javascript" src="client.c877d07a.js"></script>
+    <script>
+        const blogpost = {
+            "title": "hey there 3333",
+            "text": "oh hi 33333!"
+        }
+
+    var xhttp2 = new XMLHttpRequest();
+    xhttp2.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("app").innerHTML = this.responseText;
+        }
+    };
+    xhttp2.open("POST", "/add", true);
+    console.log(JSON.stringify(blogpost))
+    xhttp2.send(JSON.stringify(blogpost));
+    </script>
+</body>
+
+</html>
