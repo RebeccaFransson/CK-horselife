@@ -1,93 +1,43 @@
 <template>
-  <div id="bottomBar">
-    <div class="barItems">
-      <div class="item">
-        <p><span>Mail</span></p>
-        <div>ckhorselife<br>@gmail.com</div>
-      </div>
-      <div class="item">
-        <p><span>Telefon</span></p>
-        <div>0730-284544</div>
-      </div>
-      <div class="item">
-        <p><span>Adress</span></p>
-        <div>Libacka gård, <br>
-          Liebacksvägen,<br>
-          231 93 Trelleborg</div>
+  <div class="fixed-bottom bottom-25 bg-lightBlue ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <span class="badge badge-secondary-2">Mail</span>
+          <p class="m-3">
+            <a class="link" href="mailto:ckhorselife@gmail.com" target="_top">
+              ckhorselife@gmail.com
+            </a>
+          </p>
+        </div>
+        <div class="col-md">
+          <span class="badge badge-secondary-2">Mobilnummer</span>
+          <p class="m-3">
+            <a class="link" href="tel:+46730284544">0730-28 45 44</a>
+            </p>
+        </div>
+        <div class="col-md">
+          <span class="badge badge-secondary-2">Adress</span>
+          <p class="m-3">Liebacksvägen, 231 93 Trelleborg</p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'bottomBar',
-  data() {
-    return {
-    }
-  },
-  methods: {
-  }
-}
-</script>
-
 <style>
-#bottomBar {
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  color: #5b4c3e;
+.bottom-25{
+  bottom: 25px !important;
+}
+.bg-lightBlue{
   background-color: #d9ebf5;
-  bottom: 0;
-  width: 100%;
-  padding: 20px 0 30px 0;
-  margin: 50px 0;
-  min-height: min-content;
-}
 
-#bottomBar .barItems {
-  width: 80vw;
-  margin: auto;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: center;
 }
-
-#bottomBar .item{
-  margin: 0 20px;
-  word-break: break-word;
+.badge-secondary-2{
+  color: #fff;
+  background-color: #99c6de;
 }
-
-#bottomBar p {
-  font-weight: bolder;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  padding: 10px 0;
-}
-#bottomBar p > span{
-  padding: 0 7px;
-  border-bottom: 1px solid #cabc5b;
-}
-
-/* MOBILE DEVICES */
-@media only screen and (max-device-width: 480px) {
-  #bottomBar {
-    font-size: 18px;
-  }
-  #bottomBar .item{
-    min-width: 80vw;
-  }
-  #bottomBar p {
-  text-align: center;
-}
-}
-/* TABLETS */
-@media only screen and (max-device-width: 768px) and (min-device-width: 480px){
- #bottomBar {
-    font-size: 18px;
-  }
+.link{
+  color: #03a9f4;
 }
 </style>

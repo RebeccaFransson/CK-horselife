@@ -10,11 +10,11 @@
         <h3>Hästar</h3>
       </div>
     </div>
-    <div class="navColumn">
+    <!--<div class="navColumn">
       <div @click="openPopup('rentBox', $event)" class="navPicture">
         <h3>Inackodering</h3>
       </div>
-    </div>
+    </div>-->
     <div class="navColumn">
       <div @click="openPopup('riding', $event)" class="navPicture">
         <h3>Ridlektioner</h3>
@@ -30,11 +30,11 @@
         <h3>Galleri</h3>
       </div>
     </div>
-    <div class="navColumn">
+    <!--<div class="navColumn">
       <div @click="openPopup('events', $event)" class="navPicture">
         <h3>Events</h3>
       </div>
-    </div>
+    </div>-->
     <popup :whichPopup="whichPopup" :close-popup="closePopup"></popup>
   </div>
 </template>
