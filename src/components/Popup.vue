@@ -73,8 +73,21 @@ export default {
 .scrollable{
   overflow: scroll;
   position: relative;
-  height: 58vh;
+  height: 51vh;
 }
+
+@media (min-width: 768px){
+  #popupWrapper {
+      max-width: 97vw !important;
+  }
+}
+
+@media (min-width: 576px){
+  #popupWrapper {
+      max-width: 97vw !important;
+  }
+}
+
 
 /*OLD stuff*/
 #popupWrapper {
