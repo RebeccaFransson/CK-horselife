@@ -2,7 +2,7 @@
   <div id="navigation" class="popup">
     <div class="navColumn">
       <div @click="openPopup('theFarm', $event)" class="navPicture">
-        <h3>Gården</h3>
+        <h3>Om oss</h3>
       </div>
     </div>
     <div class="navColumn">

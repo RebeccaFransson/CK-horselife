@@ -1,7 +1,7 @@
 <template>
   <div id="hastar" class="container">
     <div class="row">
-      <h2 class="font-weight-bold ml-3">Libacka Gård</h2>
+      <h2 class="font-weight-bold ml-3">Hästarna</h2>
     </div>
     <div class="row">
       <div class="col-md bg-light m-1">
