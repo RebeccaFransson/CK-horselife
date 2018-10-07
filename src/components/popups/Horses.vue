@@ -1,9 +1,9 @@
 <template>
   <div id="hastar" class="container">
     <div class="row">
-      <h2>Libacka Gård</h2>
+      <h2 class="font-weight-bold ml-3">Libacka Gård</h2>
     </div>
-    <div class="text row">
+    <div class="row">
       <div class="col-md bg-light m-1">
         <img class="image-tumb border-0 rounded-circle my-3" src="/static/fol.jpg" alt="Hästar i hagen en sommar kväll">
           <p class="text-left">
@@ -23,7 +23,6 @@
             </p>
       </div>
     </div>
-
   </div>
 </template>
 <style>
