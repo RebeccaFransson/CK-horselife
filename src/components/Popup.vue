@@ -9,7 +9,7 @@
       <rentBox   v-if="whichPopup === rentBox"></rentBox>
       <theFarm   v-if="whichPopup === theFarm"></theFarm>
       <riding    v-if="whichPopup === riding"></riding>
-      <breeding  v-if="whichPopup === breeding"></breeding>
+      <riding-one-horse  v-if="whichPopup === ridingOneHorse"></riding-one-horse>
       <horses    v-if="whichPopup === horses"></horses>
       <gallery   v-if="whichPopup === gallery"></gallery>
       <events    v-if="whichPopup === events"></events>
@@ -22,7 +22,7 @@
 import TheFarm from './popups/TheFarm'
 import RentBox from './popups/RentBox'
 import Riding from './popups/Riding'
-import Breeding from './popups/Breeding'
+import RidingOneHorse from './popups/RidingOneHorse'
 import Horses from './popups/Horses'
 import Gallery from './popups/Gallery'
 import Events from './popups/Events'
@@ -30,13 +30,13 @@ import Events from './popups/Events'
 export default {
   name: 'popup',
   components: {
-    theFarm: TheFarm,
-    rentBox: RentBox,
-    riding: Riding,
-    breeding: Breeding,
-    horses: Horses,
-    gallery: Gallery,
-    events: Events
+    TheFarm,
+    RentBox,
+    Riding,
+    RidingOneHorse,
+    Horses,
+    Gallery,
+    Events
   },
   props: {
     whichPopup: {
@@ -53,7 +53,7 @@ export default {
       rentBox:  'rentBox',
       theFarm:  'theFarm',
       riding:   'riding',
-      breeding: 'breeding',
+      ridingOneHorse: 'ridingOneHorse',
       horses:   'horses',
       gallery:  'gallery',
       events:   'events'

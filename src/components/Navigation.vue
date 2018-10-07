@@ -17,12 +17,12 @@
     </div>
     <div class="navColumn">
       <div @click="openPopup('riding', $event)" class="navPicture">
-        <h3>Medryttare</h3>
+        <h3>Ridlektioner</h3>
       </div>
     </div>
     <div class="navColumn">
-      <div @click="openPopup('breeding', $event)" class="navPicture">
-        <h3>Uppfödning</h3>
+      <div @click="openPopup('ridingOneHorse', $event)" class="navPicture">
+        <h3>Medryttare</h3>
       </div>
     </div>
     <div class="navColumn">
@@ -205,11 +205,11 @@ export default {
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
-  background-image: URL('/static/sto.jpg');
+  background-image: URL('/static/camilla-hopp.jpg');
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('/static/fol.jpg');
+  background-image: URL('/static/camilla-hopp-2.jpg');
   background-position: 51%;
 }
 
