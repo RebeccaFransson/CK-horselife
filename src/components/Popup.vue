@@ -1,9 +1,11 @@
 <template>
-  <div id="popupWrapper" class="hidden">
-    <div class="topBar">
-      <div class="close" @click="closePopup">&#10006;</div>
+  <div id="popupWrapper" class="hidden container">
+    <div class="row">
+      <div class="col">
+        <div class="float-right icon" @click="closePopup">&#10006;</div>
+      </div>
     </div>
-    <div id="popupScroll">
+    <div class="row scrollable"><!--id="popupScroll"-->
       <rentBox   v-if="whichPopup === rentBox"></rentBox>
       <theFarm   v-if="whichPopup === theFarm"></theFarm>
       <riding    v-if="whichPopup === riding"></riding>
@@ -64,6 +66,17 @@ export default {
 </script>
 
 <style>
+.icon{
+  cursor: pointer;
+  font-size: 28px;
+}
+.scrollable{
+  overflow: scroll;
+  position: relative;
+  height: 58vh;
+}
+
+/*OLD stuff*/
 #popupWrapper {
   position: relative;
   top: 0;

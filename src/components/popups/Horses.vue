@@ -1,30 +1,34 @@
 <template>
-  <div id="hastar" class="popup">
-    <div class="text">
+  <div id="hastar" class="container">
+    <div class="row">
       <h2>Libacka Gård</h2>
-      <br>
-      Libacka Gård ligger strax söder om Vellinge, utanför Skegrie By. Vi finns endast 20min söder om Malmö och 8min från Trelleborg och Vellinge.
-      <br>
-      Gården är över 100år gammal men själva hästbiten började byggas 2001 när vi flyttade hem från Portugal.
-      <br>
-      Idag har vi 27 boxplatser och 2 lösdrifter med unghästar och avelsston.
-      <br>
-      Det finns ett ridhus med måtten 22m*42m med bra underlag och mycket ljusinsläpp. Våran utebana är på hela 30m*60m och används flitigt under sommarhalvåret. Det finns mycket hindermaterial att tillgå och bra träningsmöjligheter då där är pågående träningar nästan varje dag.
-      <br>
-      Trevliga ridvägar på både fält och grusvägar. Man kan rida ner till stranden i Skåre och ända bort till Fredshögs ryttarförening.
-      <br>
-      Vi har 2 stallar med varsin sadelkammare som är uppvärmda på vinterhalvåret. Gott om uppbindningsplatser samt spolspilta.
-      <br>
-      Vi har många hagar i olika storlekar och även sommarbete.
     </div>
-    <div class="image">
-      <img class="popupImg" src="/static/alla.jpg" alt="Alla hästarna">
+    <div class="text row">
+      <div class="col-md bg-light m-1">
+        <img class="image-tumb border-0 rounded-circle my-3" src="/static/fol.jpg" alt="Hästar i hagen en sommar kväll">
+          <p class="text-left">
+            Vi har allt från unghästar som vi själva har fött upp till rutinerade tävlingshästar. Alla hästarna är välskolade, snälla och gillar sitt jobb.  De är lydiga för hjälperna och har ett varierat schema så att de ska tycka arbetet är roligt.
+          </p>
+      </div>
+      <div class="col-md bg-light m-1">
+      <img class="image-tumb border-0 rounded my-3" src="/static/kli.jpg" alt="Hästar i hagen en sommar kväll">
+          <p class="text-left">
+            Hästarnas välmående går alltid först hos oss. Vi kollar igenom och behandlar dom med IR Terapi (Infraröd) flera gånger om året för att hålla dom rörliga, elastiska och friska i sina kroppar. Tänderna kollas regelbundet och alla är givetvis vaccinerade.           
+            </p>
+      </div>
+      <div class="col-md bg-light m-1">
+      <img class="image-tumb border-0 rounded-circle my-3" src="/static/gräs.jpg" alt="Hästar i hagen en sommar kväll">
+          <p class="text-left">
+            Många går på lösdrift året om och lever därmed i en flock.  Dom känsliga tas ibland in på box under den kallaste perioden. Vi erbjuder våra hästar bete under Maj-September, men de går fortfarande lektioner under denna perioden.           
+            </p>
+      </div>
     </div>
-     
 
   </div>
 </template>
 <style>
-
+.image-tumb{
+  max-height: 80px;
+}
 </style>
 
