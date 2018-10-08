@@ -148,6 +148,7 @@ export default {
 
 #navigation .navColumn h3 {
   padding: 0 20px;
+  margin: 20px 0;
   font-size: 20px;
   width: 100%;
   background-color: rgba(250, 235, 215, 0.49);
