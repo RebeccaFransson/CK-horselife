@@ -1,11 +1,11 @@
 <template>
-  <div id="popupWrapper" class="hidden container">
+  <div id="popupWrapper" class="container">
     <div class="row">
       <div class="col">
         <div class="float-right icon" @click="closePopup">&#10006;</div>
       </div>
     </div>
-    <div class="row scrollable"><!--id="popupScroll"-->
+    <div class="row scrollable">
       <rentBox   v-if="whichPopup === rentBox"></rentBox>
       <theFarm   v-if="whichPopup === theFarm"></theFarm>
       <riding    v-if="whichPopup === riding"></riding>
@@ -58,9 +58,6 @@ export default {
       gallery:  'gallery',
       events:   'events'
     }
-  },
-  mounted: () =>{
-    $('#popupWrapper').css('display', 'none')
   }
 }
 </script>
@@ -73,7 +70,15 @@ export default {
 .scrollable{
   overflow: scroll;
   position: relative;
-  height: 51vh;
+  height: 64vh;
+}
+.opend{
+  top: 0 !important;
+  transition: top 0.5s ease !important;
+}
+.closed{
+  top: 200vw !important;
+  transition: top 0.5s ease !important;
 }
 
 @media (min-width: 768px){
@@ -87,29 +92,16 @@ export default {
       max-width: 97vw !important;
   }
 }
-
-
-/*OLD stuff*/
 #popupWrapper {
   position: relative;
-  top: 0;
-  height: 58vh;
+  height: 80vh;
+  width: 97vw;
   overflow: hidden;
   align-self: center;
-  width: 97vw;
-  /*min-height: min-content;*/ 
   background-color: white;
   margin: auto;
   border: 8px solid white;
-
   transition: all 2.5s ease;
-}
-#popupScroll {
-  /*Need to have an height to set scroll */
-  height: 100%;
-  overflow: scroll;
-  position: relative;
-  bottom: 75px;
 }
 
 #popupWrapper .topBar {
@@ -134,15 +126,19 @@ export default {
 #popupWrapper .topBar .close:hover {
   transform: scale(1.25);
 }
+/*OLD stuff*/
+
+
 
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {
  #popupWrapper{
     position: absolute;
-    height: 102vh;
-    width: 100vw;
+    height: 102vh !important;
+    width: 100vw !important;
     top: 0;
     left: 0;
+    z-index: 1050;
   }
   #popupWrapper .topBar {
     padding: 10px !important;

@@ -1,5 +1,5 @@
 <template>
-  <div id="navigation" class="popup">
+  <div id="navigation">
     <div class="navColumn">
       <div @click="openPopup('theFarm', $event)" class="navPicture">
         <h3>Om oss</h3>
@@ -35,7 +35,7 @@
         <h3>Events</h3>
       </div>
     </div>-->
-    <popup :whichPopup="whichPopup" :close-popup="closePopup"></popup>
+    <popup v-show="showPopup" :class="[isOpen ? 'opend': 'closed']" :whichPopup="whichPopup" :close-popup="closePopup"></popup>
   </div>
 </template>
 
@@ -51,6 +51,7 @@ export default {
   data() {
     return {
       showPopup: false,
+      isOpen: false,
       whichPopup: ''
     }
   },
@@ -61,28 +62,32 @@ export default {
       $('body, html').animate({
         scrollTop: 0
       }, 500)
+      setTimeout(() => {
+        this.whichPopup = which
+        this.isOpen = true
+      }, 10)
       // Show popup and set which one
       this.showPopup = true
-      this.whichPopup = which
       // Set the non selected popup to unactive
       this.addUnactiveToAllExceptOne(this.findActivePictureElement(e.target));
-      // Show popup and freeze
-      $('#popupWrapper').css('display', 'block')
-      $('body').addClass('freezeScroll')
       // Animate to small pictures
       this.showSmallNavPictures(true)
+      //$('#popupWrapper').css('display', 'block')
+      $('body').addClass('freezeScroll')
     },
     closePopup: function() {
+      this.isOpen = false
        // Remove all unactive classes - TODO: Change this to function
       const pictures = $('.navPicture')
       pictures.removeClass('unactive')
-      //Close the popup
-      this.showPopup = false
       // Animate and hide
       $('body').removeClass('freezeScroll')
+
+      
       setTimeout(() => {
-        $('#popupWrapper').css('display', 'none')
-      }, 500)// When 0.5s CSS animation done
+        //Close the popup
+        this.showPopup = false
+      }, 300)// When 0.5s CSS animation done
       // Animate to big pictures
       this.showSmallNavPictures(false)
     },

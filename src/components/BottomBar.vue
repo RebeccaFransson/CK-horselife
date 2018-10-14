@@ -43,12 +43,20 @@
   color: #03a9f4;
 }
 
-/*MOBILE DEVICES */
-
-@media only screen and (max-width: 650px) {
+/* Small screens */
+@media only screen and (max-width: 650px) and (min-device-width: 768px) {
   .not-fixed-min {
     position: relative !important;
     margin-top: 50px;
+  }
+ 
+}
+
+/* Mobile devices */
+@media only screen and (max-device-width: 768px) {
+  .not-fixed-min {
+    position: relative !important;
+    margin-top: none !important;
   }
  
 }
