@@ -78,7 +78,7 @@ export default {
 }
 .closed{
   top: 200vw !important;
-  transition: top 0.5s ease !important;
+  transition: top 1s ease !important;
 }
 
 @media (min-width: 768px){
