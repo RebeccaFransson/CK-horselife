@@ -192,7 +192,7 @@ export default {
 }
 
 #navigation .navColumn:nth-child(1) .navPicture {
-  background-image: URL('/static/albin.jpg');
+  background-image: URL('/static/camilla-hopp-2.jpg');
 }
 
 #navigation .navColumn:nth-child(2) .navPicture {
@@ -210,7 +210,7 @@ export default {
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('/static/camilla-hopp-2.jpg');
+  background-image: URL('/static/albin.jpg');
   background-position: 51%;
 }
 
