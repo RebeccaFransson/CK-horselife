@@ -80,18 +80,6 @@ export default {
   top: 200vw !important;
   transition: top 1s ease !important;
 }
-
-@media (min-width: 768px){
-  #popupWrapper {
-      max-width: 97vw !important;
-  }
-}
-
-@media (min-width: 576px){
-  #popupWrapper {
-      max-width: 97vw !important;
-  }
-}
 #popupWrapper {
   position: relative;
   height: 80vh;
@@ -126,9 +114,28 @@ export default {
 #popupWrapper .topBar .close:hover {
   transform: scale(1.25);
 }
-/*OLD stuff*/
 
+/* SMALL SCREENS */
+@media only screen and (max-width: 992px){
+  .scrollable {
+      height: 60vh !important;
+  }
+  #popupWrapper{
+    min-width: 97vw !important;
+  }
+}
 
+@media only screen and (max-width: 768px){
+  .scrollable {
+      height: 57vh !important;
+  }
+}
+
+@media only screen and (max-width: 650px){
+  .scrollable {
+      height: 70vh !important;
+  }
+}
 
 /* TABLETS AND MOBILE DEVICES */
 @media only screen and (max-device-width: 768px) {

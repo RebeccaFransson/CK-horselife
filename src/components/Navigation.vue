@@ -82,7 +82,10 @@ export default {
       pictures.removeClass('unactive')
       // Animate and hide
       $('body').removeClass('freezeScroll')
-
+      // Scroll back in the popup
+      $('.scrollable').animate({
+        scrollTop: 0
+      }, 50)
       
       setTimeout(() => {
         //Close the popup
