@@ -13,14 +13,14 @@
         </p>
       </div>
       <div class="col-md-3 p-3">
-        <img class="image-tumb border-0 rounded" src="/static/camilla.jpg" alt="Camillas ansikte">
+        <img class="image-tumb border-0 rounded" src="/static/emilhopp.jpg" alt="Emil hoppar">
       </div>
     </div>
 
 
     <div class="row">
       <div class="col-md-3 p-3">
-        <img class="image-tumb border-0 rounded" src="/static/camilla.jpg" alt="Camillas ansikte">
+        <img class="image-tumb border-0 rounded" src="/static/gräs.jpg" alt="Zeb äter gräs">
       </div>
       <div class="col-md-8 py-2">
         <p class="text-left">
@@ -77,15 +77,7 @@
 </template>
 <style>
 .image-tumb{
-  max-height: 100px;
-}
-.image-tumb-big{
-  max-height: 145px;
-}
-
-#garden .text{
-    width: 30%;
-    margin: 20px;
+  max-height: 150px;
 }
 
 </style>
