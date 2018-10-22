@@ -200,34 +200,34 @@ export default {
 }
 
 #navigation .navColumn:nth-child(1) .navPicture {
-  background-image: URL('/static/camilla-hopp-2.jpg');
+  background-image: URL('./static/camilla-hopp-2.jpg');
 }
 
 #navigation .navColumn:nth-child(2) .navPicture {
-  background-image: URL('/static/shirin.jpg');
+  background-image: URL('./static/shirin.jpg');
   color:#40260a !important;
 }
 
 #navigation .navColumn:nth-child(3) .navPicture {
-  background-image: URL('/static/shirin2.jpg');
+  background-image: URL('./static/shirin2.jpg');
   color:#40260a !important;
 }
 
 #navigation .navColumn:nth-child(4) .navPicture {
-  background-image: URL('/static/camilla-hopp.jpg');
+  background-image: URL('./static/camilla-hopp.jpg');
 }
 
 #navigation .navColumn:nth-child(5) .navPicture {
-  background-image: URL('/static/albin.jpg');
+  background-image: URL('./static/albin.jpg');
   background-position: 51%;
 }
 
 #navigation .navColumn:nth-child(6) .navPicture {
-  background-image: URL('/static/kli.jpg');
+  background-image: URL('./static/kli.jpg');
 }
 
 #navigation .navColumn:nth-child(7) .navPicture {
-  background-image: URL('/static/emilhopp.jpg');
+  background-image: URL('./static/emilhopp.jpg');
   color:#40260a !important;
 }
 
