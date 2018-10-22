@@ -1,5 +1,5 @@
 <template>
-  <div id="gallery" class="popup">
+  <div id="gallery">
     <gallery :images="images" :index="index" @close="index = null"></gallery>
     <div
       class="image"
@@ -33,7 +33,6 @@ export default {
             '/static/gallery/trainingAlbinAndSonja.jpg',
             '/static/gallery/trainingDioraAndSandra.jpg',
             '/static/gallery/trainingEmilAndPernilla.jpg',
-            '/static/gallery/trainingErosAndTina.jpg',
             '/static/gallery/trainingQubbe.jpg'
         ]
     }
@@ -51,11 +50,13 @@ export default {
 #gallery .image{
   background-size: cover;
   background-position: center;
+  float: left;
   margin: 5px;
   height: 200px !important;
   min-width: 200px !important;
   transition: all .5s;
 }
+
 #gallery .image:hover{
   cursor: pointer;
   transform: scale(1.04);
@@ -66,8 +67,5 @@ export default {
   max-width: 90%;
   border: 1px solid black;
 }
-
-
-
 </style>
 
