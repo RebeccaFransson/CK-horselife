@@ -18,7 +18,7 @@
         </div>
         <div class="col-sm">
           <span class="badge badge-secondary-2">Adress</span>
-          <p class="m-3">Liebacksvägen, 231 93 Trelleborg</p>
+          <p class="m-3">116-6 Liebacksvägen, 231 93 Trelleborg</p>
         </div>
       </div>
     </div>
