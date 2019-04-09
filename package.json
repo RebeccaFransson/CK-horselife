@@ -26,8 +26,10 @@
     "email": "rebecca@kollektiva.se"
   },
   "dependencies": {
-    "babel-preset-vue": "^2.0.0",
+    "babel-preset-vue": "^2.0.2",
+    "bootstrap-vue": "^2.0.0-rc.18",
     "express": "^4.16.4",
+    "jquery": "^3.3.1",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "promise-polyfill": "^6.1.0",
