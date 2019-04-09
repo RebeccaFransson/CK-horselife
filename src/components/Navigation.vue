@@ -42,7 +42,7 @@
 
 <script>
 //:class="{hide: !popup}" 
-import Popup from './Popup'
+import Popup from './Popup.vue'
 export default {
   name: 'navigation',
   components: {

@@ -19,13 +19,13 @@
 
 <script>
 /***/
-import TheFarm from './popups/TheFarm'
-import RentBox from './popups/RentBox'
-import Riding from './popups/Riding'
-import RidingOneHorse from './popups/RidingOneHorse'
-import Horses from './popups/Horses'
-import Gallery from './popups/Gallery'
-import Events from './popups/Events'
+import TheFarm from './popups/TheFarm.vue'
+import RentBox from './popups/RentBox.vue'
+import Riding from './popups/Riding.vue'
+import RidingOneHorse from './popups/RidingOneHorse.vue'
+import Horses from './popups/Horses.vue'
+import Gallery from './popups/Gallery.vue'
+import Events from './popups/Events.vue'
 
 export default {
   name: 'popup',

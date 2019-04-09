@@ -7,7 +7,7 @@
 
 <script>
 import Navigation from './Navigation.vue'
-import BottomBar from './BottomBar'
+import BottomBar from './BottomBar.vue'
 
 export default {
   name: 'app',
